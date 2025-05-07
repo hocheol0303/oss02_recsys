@@ -17,6 +17,7 @@ NUM_ITEMS = 500
 SAVE_DIR = "/Users/myserver/workspace/oss/model03_id_NCF/saved_models"
 TRAIN_CSV_PATH = "/Users/myserver/workspace/oss/data/rating_train.csv"
 VAL_CSV_PATH = "/Users/myserver/workspace/oss/data/rating_test.csv"
+WANDB_KEY = '/Users/myserver/workspace/OSS/tmp/wandb_key.txt'
 
 RUN_NAME = f'movie_{BATCH_SIZE}Batch_{EPOCHS}Epoch_{BATCH_SIZE}Batch_LR{LEARNING_RATE}_{NUM_USERS}Users_{NUM_ITEMS}Items'
 
@@ -86,7 +87,7 @@ def train_model(train_csv_path, val_csv_path, num_users, num_items, epochs=10, l
 
 
 if __name__ == "__main__":
-    wandb_key = open('/Users/myserver/workspace/OSS/tmp/wandb_key.txt', 'r').readline()
+    wandb_key = open(WANDB_KEY, 'r').readline()
     wandb.login(key=wandb_key)
     wandb.init(
         project='OSS_RecSys',
