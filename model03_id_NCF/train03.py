@@ -90,6 +90,7 @@ if __name__ == "__main__":
     wandb.login(key=wandb_key)
     wandb.init(
         project='OSS_RecSys',
+        entity="dgu_oss",
         name = RUN_NAME,
         config = {
             "learning_rate": LEARNING_RATE,
