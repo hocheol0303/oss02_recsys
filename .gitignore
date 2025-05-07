@@ -1,0 +1,7 @@
+tmp/
+yelp/
+saved_models/
+wandb/
+*.egg-info/
+__pycache__/
+data/
