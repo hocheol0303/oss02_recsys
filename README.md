@@ -47,3 +47,8 @@ baseline directory 구조(model03_id_NCF만 작성)
     ├── yelp_academic_dataset_review.json
     ├── yelp_academic_dataset_tip.json
     └── yelp_academic_dataset_user.json
+
+train.py의 wandb_key에 wandb 사이트 우측 상단 - user settings - API keys의 내용을 .txt 파일로 저장하고 그 경로를 입력하면 로깅 가능. 이 때, github에 올라가지 않도록 tmp 폴더에 넣어야 함.(어떤 사이트인지간에 API key는 무조건 비공개!!)
+
+tmp_movie_data 브랜치에서 model03_id_NCF/*.csv를 볼 수 있음.
+경로 설정, wandb key 설정 후 root 디렉토리에서 python model03_id_NCF/train03.py 코드 실행하면 실행 가능해야함!!
