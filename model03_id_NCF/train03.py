@@ -18,7 +18,7 @@ SAVE_DIR = "/Users/myserver/workspace/oss/model03_id_NCF/saved_models"
 TRAIN_CSV_PATH = "/Users/myserver/workspace/oss/data/rating_train.csv"
 VAL_CSV_PATH = "/Users/myserver/workspace/oss/data/rating_test.csv"
 
-RUN_NAME = f'movie_{BATCH_SIZE}_{EPOCHS}Epoch_{BATCH_SIZE}Batch_LR{LEARNING_RATE}_{NUM_USERS}Users_{NUM_ITEMS}Items'
+RUN_NAME = f'movie_{BATCH_SIZE}Batch_{EPOCHS}Epoch_{BATCH_SIZE}Batch_LR{LEARNING_RATE}_{NUM_USERS}Users_{NUM_ITEMS}Items'
 
 def train_model(train_csv_path, val_csv_path, num_users, num_items, epochs=10, lr=1e-3, batch_size=64):
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
