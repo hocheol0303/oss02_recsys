@@ -7,6 +7,7 @@ from model03_id_NCF.dataloader03 import get_dataloader
 from utils import rmse, mae, clear_memory, SaveTopKModels
 import wandb
 from tqdm import tqdm
+import datetime
 
 LEARNING_RATE = 1e-3
 BATCH_SIZE = 64
@@ -22,6 +23,7 @@ WANDB_KEY = '/Users/myserver/workspace/OSS/tmp/wandb_key.txt'
 RUN_NAME = f'movie_{BATCH_SIZE}Batch_{EPOCHS}Epoch_{BATCH_SIZE}Batch_LR{LEARNING_RATE}_{NUM_USERS}Users_{NUM_ITEMS}Items'
 
 def train_model(train_csv_path, val_csv_path, num_users, num_items, epochs=10, lr=1e-3, batch_size=64):
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     saver = SaveTopKModels(k=3, save_dir=os.path.join(SAVE_DIR, RUN_NAME), num_users=num_users, num_items=num_items)
     print(f"🖥️  [Device] {device}")
@@ -49,8 +51,8 @@ def train_model(train_csv_path, val_csv_path, num_users, num_items, epochs=10, l
             optimizer.step()
 
             total_loss += loss.item()
-            all_preds.extend(preds.detach().cpu().numpy())
-            all_targets.extend(ratings.cpu().numpy())
+            all_preds.extend(np.atleast_1d(preds.detach().cpu().numpy()))
+            all_targets.extend(np.atleast_1d(ratings.cpu().numpy()))
         
         train_rmse = rmse(np.array(all_preds), np.array(all_targets))
         train_mae = mae(np.array(all_preds), np.array(all_targets))
@@ -63,8 +65,8 @@ def train_model(train_csv_path, val_csv_path, num_users, num_items, epochs=10, l
                 user_ids, item_ids, ratings = user_ids.to(device), item_ids.to(device), ratings.to(device)
 
                 preds = model(user_ids, item_ids)
-                val_preds.extend(preds.cpu().numpy())
-                val_targets.extend(ratings.cpu().numpy())
+                val_preds.extend(np.atleast_1d(preds.cpu().numpy()).tolist())
+                val_targets.extend(np.atleast_1d(ratings.cpu().numpy()).tolist())
         
         val_rmse = rmse(np.array(val_preds), np.array(val_targets))
         val_mae = mae(np.array(val_preds), np.array(val_targets))
