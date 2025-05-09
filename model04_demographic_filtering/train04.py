@@ -22,6 +22,13 @@ WANDB_KEY = "/Users/myserver/workspace/OSS/tmp/wandb_key.txt"
 
 RUN_NAME = f"demographic_{BATCH_SIZE}Batch_{EPOCHS}Epoch_LR{LEARNING_RATE}_{datetime.datetime.now().strftime('%m%d_%H%M%S')}"
 
+NUM_GENDER = 2
+NUM_AGE = 2
+NUM_MAJOR = 6
+NUM_GRADE = 5
+NUM_ITEMS = 500
+EMBED_DIM = 8
+HIDDEN_DIM = 64
 
 def train_model(train_csv_path, val_csv_path, user_path, mapping_path, epochs=10, lr=1e-3, batch_size=64):
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
@@ -31,7 +38,15 @@ def train_model(train_csv_path, val_csv_path, user_path, mapping_path, epochs=10
     train_loader = get_dataloader(train_csv_path, user_path, mapping_path, batch_size)
     val_loader = get_dataloader(val_csv_path, user_path, mapping_path, batch_size)
 
-    model = DemographicNet().to(device)
+    model = DemographicNet(
+        gender_dim=NUM_GENDER,
+        age_dim=NUM_AGE,
+        major_dim=NUM_MAJOR,
+        grade_dim=NUM_GRADE,
+        num_items=NUM_ITEMS,
+        embed_dim=EMBED_DIM,
+        hidden_dim=HIDDEN_DIM
+    ).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     criterion = nn.MSELoss()
 
@@ -41,11 +56,14 @@ def train_model(train_csv_path, val_csv_path, user_path, mapping_path, epochs=10
         all_preds, all_targets = [], []
 
         for gender, age, major, grade, item, ratings in tqdm(train_loader, desc="Training", leave=False):
-            gender, age, major, grade, ratings = (
-                gender.to(device), age.to(device), major.to(device), grade.to(device), ratings.to(device)
-            )
+            gender = gender.to(device)
+            age = age.to(device)
+            major = major.to(device)
+            grade = grade.to(device)
+            item = item.to(device)
+            ratings = ratings.to(device)
 
-            preds = model(gender, age, major, grade)
+            preds = model(gender, age, major, grade, item)
             loss = criterion(preds, ratings)
 
             optimizer.zero_grad()
@@ -64,10 +82,14 @@ def train_model(train_csv_path, val_csv_path, user_path, mapping_path, epochs=10
         val_preds, val_targets = [], []
         with torch.no_grad():
             for gender, age, major, grade, item, ratings in tqdm(val_loader, desc="Validation", leave=False):
-                gender, age, major, grade, ratings = (
-                    gender.to(device), age.to(device), major.to(device), grade.to(device), ratings.to(device)
-                )
-                preds = model(gender, age, major, grade)
+                gender = gender.to(device)
+                age = age.to(device)
+                major = major.to(device)
+                grade = grade.to(device)
+                item = item.to(device)
+                ratings = ratings.to(device)
+
+                preds = model(gender, age, major, grade, item)
                 val_preds.extend(np.atleast_1d(preds.cpu().numpy()))
                 val_targets.extend(np.atleast_1d(ratings.cpu().numpy()))
 
