@@ -34,10 +34,10 @@ def clear_memory(epoch):
 class SaveTopKModels:
     def __init__(self, k=3, save_dir="saved_models", num_users=0, num_items=0):
         self.k = k
-        self.save_dir = save_dir
+        self.save_dir = os.path.join(save_dir, datetime.datetime.now().strftime("%m%d_%H%M%S"))
         self.num_users = num_users
         self.num_items = num_items
-        os.makedirs(save_dir, exist_ok=True)
+        os.makedirs(self.save_dir, exist_ok=True)
         self.saved_models = []  # (filepath, val_rmse)
 
     def maybe_save(self, model, epoch, val_rmse):
