@@ -4,7 +4,7 @@ import os
 import numpy as np
 from model04_demographic_filtering.model04 import DemographicNet
 from model04_demographic_filtering.dataloader04 import get_dataloader
-from utils import rmse, mae, clear_memory, SaveTopKModels
+from utils.utils import rmse, mae, clear_memory, SaveTopKModels
 import wandb
 from tqdm import tqdm
 import datetime

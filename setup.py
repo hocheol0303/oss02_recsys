@@ -11,6 +11,7 @@ setup(
         'model02_yelp_NCF',
         'model03_id_NCF',
         'model04_demographic_filtering',
+        'utils'
     ]),
     install_requires=[
         'torch',

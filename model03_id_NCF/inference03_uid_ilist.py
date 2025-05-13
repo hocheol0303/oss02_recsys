@@ -4,11 +4,11 @@ import numpy as np
 import json
 from model03_id_NCF.model03 import NCF
 
-MODEL_PATH = "/Users/myserver/workspace/oss/model03_id_NCF/saved_models/movie_64_50Epoch_64Batch_LR0.001_1000Users_500Items/epoch19_20250507_164830_valrmse0.8963.pt"
+MODEL_PATH = "/Users/myserver/workspace/oss/model03_id_NCF/epoch18_20250513_153350_valrmse0.1796.pt"
 OUTPUT_PATH = "/Users/myserver/workspace/oss/tmp/inference_result.json"
 
-USER_ID = 1
-ITEM_IDS = [1, 2, 3, 4, 5]
+USER_ID = 0
+ITEM_IDS = [1, 2, 3, 5, 0, 1000, 1001, 1002]
 
 
 def load_model(model_state_dict, num_users, num_items):
@@ -40,6 +40,10 @@ def predict(model, user_id:int, item_ids:list, output_path="inference_result.jso
             "predicted_rating": pred.item()
         })
     
+    print(f"유저 ID: {user_id}, 예측 아이템 수: {len(item_ids)}")
+    for i, item_id in enumerate(item_ids):
+        print(f"아이템 ID: {item_id}, 예측 평점: {results[i]['predicted_rating']:.4f}")
+
     with open(output_path, "w") as f:
         json.dump(results, f, indent=2)
     
