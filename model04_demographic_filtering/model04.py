@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 RATING_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/rating_train.csv"
 USER_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/user_data.csv"
@@ -54,24 +55,32 @@ def calculate_group_item_mean(df):
 
 # ✅ 4. 추천
 def recommend_for_user(user_info, group_means, top_k=5):
-    user_group = group_means[
-        (group_means['gender_idx'] == user_info['gender_idx']) &
-        (group_means['age_idx'] == user_info['age_idx']) &
-        (group_means['grade_idx'] == user_info['grade_idx']) &
-        (group_means['channel_idx'] == user_info['channel_idx'])
+    conditions = [
+        (['gender_idx', 'age_idx', 'grade_idx', 'channel_idx'], "모든 그룹 일치"),
+        (['gender_idx', 'age_idx', 'grade_idx'], "gender, age, grade 일치"),
+        (['gender_idx', 'age_idx'], "gender, age 일치"),
+        (['gender_idx'], "gender 일치"),
     ]
 
-    if user_group.empty:
-        print("❗ 해당 그룹 데이터 없음 → 전체 평균 추천")
-        fallback = group_means.groupby('itemId')['rating'].mean().sort_values(ascending=False).head(top_k).reset_index()
-        fallback['rank'] = range(1, len(fallback)+1)
-        fallback.rename(columns={'rating': 'predicted_rating'}, inplace=True)
-        return fallback[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
-    else:
-        user_group_sorted = user_group.sort_values('rating', ascending=False).head(top_k).reset_index(drop=True)
-        user_group_sorted['rank'] = user_group_sorted.index + 1
-        user_group_sorted.rename(columns={'rating': 'predicted_rating'}, inplace=True)
-        return user_group_sorted[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
+    for keys, description in conditions:
+        query = np.ones(len(group_means), dtype=bool)
+        for key in keys:
+            query &= (group_means[key] == user_info[key])
+        user_group = group_means[query]
+
+        if not user_group.empty:
+            print(f"✅ {description} 기준 추천")
+            user_group_sorted = user_group.sort_values('rating', ascending=False).head(top_k).reset_index(drop=True)
+            user_group_sorted['rank'] = user_group_sorted.index + 1
+            user_group_sorted.rename(columns={'rating': 'predicted_rating'}, inplace=True)
+            return user_group_sorted[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
+
+    # ➡️ 마지막 fallback: 전체 평균
+    print("❗ 그룹 없음 → 전체 평균 추천")
+    fallback = group_means.groupby('itemId')['rating'].mean().sort_values(ascending=False).head(top_k).reset_index()
+    fallback['rank'] = range(1, len(fallback)+1)
+    fallback.rename(columns={'rating': 'predicted_rating'}, inplace=True)
+    return fallback[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
 
 
 def inference(user_id, top_k):
