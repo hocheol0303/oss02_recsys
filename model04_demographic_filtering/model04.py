@@ -39,7 +39,7 @@ def apply_demographic_mapping(users_df, mapping_path):
     return users_df
 
 # ✅ 2. Rating과 merge
-def load_and_merge(rating_path, user_path, mapping_path):
+def load_and_merge(rating_path=RATING_PATH, user_path=USER_PATH, mapping_path=MAPPING_PATH):
     ratings = pd.read_csv(rating_path)
     users = pd.read_csv(user_path)
     users = apply_demographic_mapping(users, mapping_path)
@@ -66,6 +66,23 @@ def recommend_for_user(user_info, group_means, top_k=5):
         return group_means.groupby('itemId')['rating'].mean().sort_values(ascending=False).head(top_k)
     else:
         return user_group.sort_values('rating', ascending=False).head(top_k)
+
+def inference(user_id, top_k):
+    df = load_and_merge(RATING_PATH, USER_PATH, MAPPING_PATH)
+    group_means = calculate_group_item_mean(df)
+
+    user = df[df['userId'] == user_id].iloc[0]
+    user_info = {
+        'gender_idx': user['gender_idx'],
+        'age_idx': user['age_idx'],
+        'grade_idx': user['grade_idx'],
+        'channel_idx': user['channel_idx']
+    }
+
+    recommendations = recommend_for_user(user_info, group_means, top_k=top_k)
+    # print(recommendations)
+    return recommendations
+
 
 # ✅ 5. 전체 실행 예시
 if __name__ == "__main__":

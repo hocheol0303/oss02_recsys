@@ -56,6 +56,8 @@ def recommend_top_k_for_user(model, user_id, num_items, top_k=10, batch_size=512
     df_result.to_csv(OUTPUT_PATH, index=False)
     print(f"✅ Top-{top_k} 추천 완료 → {OUTPUT_PATH}")
 
+    return df_result
+
 def inference(user_id, top_k):
     # 모델 로드
     checkpoint = torch.load(MODEL_PATH, map_location=torch.device("cpu"))
@@ -66,8 +68,9 @@ def inference(user_id, top_k):
     model = load_model(model_state_dict, num_users, num_items)
 
     # 추천 수행
-    recommend_top_k_for_user(model, user_id, num_items, top_k)
+    df_result = recommend_top_k_for_user(model, user_id, num_items, top_k)
     print("✅ 전체 추천 완료")
+    return df_result
 
 if __name__ == "__main__":
     checkpoint = torch.load(MODEL_PATH, map_location=torch.device("cpu"))
