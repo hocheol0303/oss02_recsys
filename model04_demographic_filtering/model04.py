@@ -63,13 +63,23 @@ def recommend_for_user(user_info, group_means, top_k=5):
 
     if user_group.empty:
         print("❗ 해당 그룹 데이터 없음 → 전체 평균 추천")
-        return group_means.groupby('itemId')['rating'].mean().sort_values(ascending=False).head(top_k)
+        fallback = group_means.groupby('itemId')['rating'].mean().sort_values(ascending=False).head(top_k).reset_index()
+        fallback['rank'] = range(1, len(fallback)+1)
+        fallback.rename(columns={'rating': 'predicted_rating'}, inplace=True)
+        return fallback[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
     else:
-        return user_group.sort_values('rating', ascending=False).head(top_k)
+        user_group_sorted = user_group.sort_values('rating', ascending=False).head(top_k).reset_index(drop=True)
+        user_group_sorted['rank'] = user_group_sorted.index + 1
+        user_group_sorted.rename(columns={'rating': 'predicted_rating'}, inplace=True)
+        return user_group_sorted[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
+
 
 def inference(user_id, top_k):
-    df = load_and_merge(RATING_PATH, USER_PATH, MAPPING_PATH)
+    df = load_and_merge()
     group_means = calculate_group_item_mean(df)
+
+    if df[df['userId'] == user_id].empty:
+        raise ValueError(f"userId {user_id} not found")
 
     user = df[df['userId'] == user_id].iloc[0]
     user_info = {
@@ -80,7 +90,6 @@ def inference(user_id, top_k):
     }
 
     recommendations = recommend_for_user(user_info, group_means, top_k=top_k)
-    # print(recommendations)
     return recommendations
 
 

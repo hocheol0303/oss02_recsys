@@ -25,16 +25,6 @@ model_ncf.eval()
 device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 model_ncf = model_ncf.to(device)
 
-
-# =========================
-# 요청 스키마 공통
-# =========================
-
-class RecommendRequest(BaseModel):
-    user_id: int
-    demo_top_k: int = 5
-    ncf_top_k: int = 10
-
 # =========================
 # NCF 추천 엔드포인트
 # =========================
@@ -91,5 +81,5 @@ def demographic_recommend(user_id: int, top_k: int=5):
     return {
         "user_id": user_id,
         "top_k": top_k,
-        "recommendations": recommendations.reset_index().to_dict(orient='records')
+        "recommendations": recommendations
     }

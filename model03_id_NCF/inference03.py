@@ -49,13 +49,6 @@ def recommend_top_k_for_user(model, user_id, num_items, top_k=10, batch_size=512
         "predicted_rating": top_k_scores
     })
 
-    print(f"{user_id} 사용자에 대한 추천 결과:")
-    for i, (item, rating) in enumerate(zip(top_k_items, top_k_scores)):
-        print(f"{i+1}등 추천 아이템: {item}, 예측 평점: {rating:.4f}")
-
-    df_result.to_csv(OUTPUT_PATH, index=False)
-    print(f"✅ Top-{top_k} 추천 완료 → {OUTPUT_PATH}")
-
     return df_result
 
 def inference(user_id, top_k):
@@ -69,7 +62,7 @@ def inference(user_id, top_k):
 
     # 추천 수행
     df_result = recommend_top_k_for_user(model, user_id, num_items, top_k)
-    print("✅ 전체 추천 완료")
+
     return df_result
 
 if __name__ == "__main__":
