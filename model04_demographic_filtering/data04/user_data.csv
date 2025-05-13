@@ -1,1001 +1,1001 @@
 userId,gender,age,grade,likedChannel
-0,female,26,fresher,E
-1,male,23,sophomore,B
-2,male,19,senior,E
-3,female,31,junior,E
-4,female,32,fresher,D
-5,female,25,fresher,A
-6,male,33,sophomore,A
-7,male,26,eternal,C
-8,male,28,senior,E
-9,male,20,sophomore,C
-10,male,25,fresher,D
-11,male,22,senior,E
-12,male,24,sophomore,D
-13,male,35,fresher,C
-14,female,20,fresher,B
-15,female,28,eternal,D
-16,female,24,junior,A
-17,male,24,sophomore,A
-18,male,34,junior,B
-19,male,27,senior,D
-20,male,23,fresher,D
-21,female,27,eternal,A
-22,female,30,eternal,D
-23,male,34,eternal,D
-24,male,27,senior,C
-25,female,28,sophomore,C
-26,male,31,junior,E
-27,female,31,sophomore,D
-28,male,35,fresher,A
-29,female,22,fresher,C
-30,female,20,junior,A
-31,female,27,senior,C
-32,female,29,sophomore,C
-33,male,27,senior,A
-34,male,35,sophomore,C
-35,female,33,senior,C
-36,female,33,eternal,C
-37,female,34,eternal,E
-38,female,24,sophomore,D
-39,female,29,fresher,B
-40,female,23,junior,B
-41,male,19,senior,B
-42,male,28,eternal,B
-43,male,27,senior,A
-44,male,30,eternal,D
-45,female,23,fresher,B
-46,female,20,sophomore,B
-47,female,19,sophomore,D
-48,female,23,junior,D
-49,male,19,senior,D
-50,female,32,junior,D
-51,male,20,eternal,E
-52,female,28,junior,A
-53,male,23,junior,A
-54,male,34,sophomore,E
-55,female,31,junior,D
-56,female,33,fresher,C
-57,female,24,sophomore,C
-58,male,19,senior,D
-59,female,26,fresher,A
-60,female,31,fresher,A
-61,male,33,fresher,A
-62,male,27,senior,E
-63,female,25,sophomore,A
-64,female,31,senior,C
-65,female,26,sophomore,E
-66,male,24,fresher,B
-67,male,22,senior,B
-68,male,21,junior,E
-69,male,23,eternal,B
-70,female,24,eternal,B
-71,male,27,senior,C
-72,female,33,fresher,E
-73,male,32,eternal,B
-74,male,19,junior,A
-75,male,31,sophomore,E
-76,male,26,junior,C
-77,female,19,sophomore,E
-78,male,25,sophomore,B
-79,female,21,senior,E
-80,male,35,senior,C
-81,female,28,senior,E
-82,female,22,fresher,E
-83,male,19,eternal,D
-84,male,34,sophomore,E
-85,male,31,fresher,C
-86,male,31,senior,E
-87,female,26,senior,B
-88,male,28,eternal,A
-89,male,22,junior,A
-90,male,23,junior,E
-91,female,29,eternal,E
-92,male,33,eternal,B
-93,female,24,senior,D
-94,female,28,junior,A
-95,female,28,sophomore,C
-96,female,28,eternal,A
-97,female,19,senior,E
-98,male,23,junior,E
-99,female,19,sophomore,B
-100,male,35,fresher,B
-101,female,22,junior,A
-102,female,35,eternal,A
-103,male,35,sophomore,E
-104,female,33,eternal,E
-105,male,35,sophomore,D
-106,female,32,sophomore,D
-107,male,28,senior,E
-108,male,26,sophomore,E
-109,male,31,eternal,D
-110,male,22,fresher,E
-111,female,27,senior,E
-112,female,24,senior,B
-113,female,20,sophomore,B
-114,female,21,senior,B
-115,male,23,eternal,D
-116,male,32,eternal,A
-117,male,20,senior,D
-118,female,23,sophomore,D
-119,male,24,eternal,C
-120,female,32,eternal,D
-121,female,29,sophomore,A
-122,male,20,eternal,A
-123,female,29,fresher,D
-124,male,35,sophomore,E
-125,female,29,senior,A
-126,female,28,senior,D
-127,male,22,fresher,E
-128,male,30,sophomore,B
-129,male,26,senior,C
-130,male,22,fresher,B
-131,male,30,senior,C
-132,female,25,eternal,C
-133,female,32,eternal,A
-134,female,31,eternal,D
-135,male,32,sophomore,D
-136,male,28,eternal,E
-137,female,27,eternal,B
-138,female,29,senior,C
-139,female,35,sophomore,D
-140,male,30,fresher,D
-141,male,20,fresher,A
-142,male,33,eternal,C
-143,female,23,eternal,B
-144,male,20,eternal,E
-145,male,31,fresher,C
-146,female,21,senior,C
-147,female,25,fresher,C
-148,male,33,senior,A
-149,male,31,eternal,E
-150,female,24,fresher,C
-151,male,25,junior,A
-152,female,24,fresher,E
-153,male,25,eternal,A
-154,female,30,junior,D
-155,female,26,sophomore,C
-156,male,29,eternal,A
-157,male,28,senior,C
-158,female,23,eternal,B
-159,male,25,fresher,A
-160,male,34,eternal,B
-161,female,21,sophomore,C
-162,female,25,sophomore,E
-163,female,24,eternal,C
-164,male,24,junior,B
-165,female,35,junior,E
-166,male,21,sophomore,E
-167,male,28,junior,B
-168,male,34,eternal,C
-169,female,29,eternal,A
-170,female,29,eternal,E
-171,female,32,eternal,C
-172,female,25,sophomore,D
-173,male,28,junior,A
-174,male,19,senior,C
-175,female,34,eternal,A
-176,male,27,sophomore,B
-177,female,31,junior,A
-178,male,26,fresher,B
-179,female,30,senior,D
-180,male,32,eternal,C
-181,female,20,sophomore,A
-182,female,34,fresher,B
-183,male,22,fresher,B
-184,male,21,eternal,D
-185,female,32,sophomore,E
-186,male,30,fresher,B
-187,female,30,junior,B
-188,male,20,eternal,D
-189,female,32,eternal,D
-190,female,29,senior,D
-191,male,24,senior,D
-192,male,32,eternal,B
-193,female,30,fresher,C
-194,female,21,junior,B
-195,female,20,senior,B
-196,female,33,eternal,B
-197,female,35,junior,E
-198,female,31,senior,D
-199,female,22,sophomore,E
-200,female,22,fresher,E
-201,male,26,junior,A
-202,female,22,junior,B
-203,male,31,eternal,A
-204,male,29,junior,A
-205,male,29,senior,E
-206,male,29,eternal,C
-207,female,32,junior,C
-208,male,26,eternal,E
-209,female,27,eternal,E
-210,female,30,fresher,C
-211,female,35,fresher,B
-212,female,32,senior,E
-213,male,29,junior,C
-214,male,22,sophomore,D
-215,male,19,senior,C
-216,female,19,fresher,E
-217,male,20,sophomore,D
-218,female,33,fresher,C
-219,male,34,senior,A
-220,male,26,eternal,A
-221,female,28,fresher,E
-222,female,33,fresher,C
-223,female,32,sophomore,A
-224,male,26,senior,A
-225,female,32,sophomore,A
-226,male,28,sophomore,D
-227,female,21,eternal,C
-228,female,35,sophomore,E
-229,female,19,senior,A
-230,female,21,junior,A
-231,female,23,senior,B
-232,male,25,senior,A
-233,female,26,fresher,E
-234,female,20,eternal,D
-235,female,27,eternal,D
-236,female,22,eternal,D
-237,female,24,senior,E
-238,male,27,sophomore,D
-239,male,19,sophomore,E
-240,male,26,sophomore,A
-241,female,19,sophomore,B
-242,male,24,sophomore,B
-243,male,32,eternal,B
-244,female,34,eternal,A
-245,male,24,fresher,C
-246,female,21,eternal,E
-247,female,26,junior,A
-248,female,24,fresher,B
-249,male,35,senior,C
-250,female,33,junior,A
-251,female,31,senior,D
-252,male,25,eternal,C
-253,female,34,sophomore,B
-254,female,20,fresher,B
-255,female,28,junior,D
-256,female,28,sophomore,A
-257,male,34,fresher,A
-258,male,34,sophomore,A
-259,female,24,eternal,B
-260,female,20,sophomore,C
-261,female,23,senior,E
-262,male,29,junior,B
-263,male,22,junior,D
-264,male,22,junior,A
-265,female,34,senior,A
-266,female,32,sophomore,A
-267,male,28,senior,D
-268,female,25,senior,E
-269,male,28,fresher,B
-270,male,26,senior,B
-271,male,32,sophomore,D
-272,female,28,junior,B
-273,male,24,eternal,D
-274,female,24,fresher,E
-275,male,28,sophomore,C
-276,female,34,junior,E
-277,female,20,fresher,B
-278,female,25,eternal,B
-279,female,28,eternal,B
-280,female,20,senior,D
-281,male,23,fresher,A
-282,female,23,sophomore,A
-283,female,19,eternal,B
-284,male,33,fresher,D
-285,male,32,eternal,A
-286,female,20,senior,B
-287,female,33,junior,A
-288,female,24,junior,C
-289,male,23,fresher,A
-290,male,29,senior,C
-291,female,35,sophomore,C
-292,male,20,senior,D
-293,female,31,sophomore,D
-294,female,23,junior,A
-295,male,20,eternal,A
-296,female,28,sophomore,B
-297,male,24,senior,B
-298,female,26,senior,D
-299,male,34,eternal,D
-300,male,33,fresher,D
-301,male,19,eternal,E
-302,male,31,senior,E
-303,female,33,eternal,E
-304,female,21,junior,B
-305,male,25,senior,B
-306,female,24,senior,D
-307,male,24,senior,A
-308,female,25,junior,E
-309,female,27,senior,E
-310,male,19,fresher,A
-311,female,30,fresher,B
-312,male,28,junior,C
-313,male,21,sophomore,E
-314,male,25,eternal,A
-315,female,21,sophomore,C
-316,female,22,senior,B
-317,male,24,junior,C
-318,male,35,eternal,B
-319,male,31,fresher,A
-320,male,21,sophomore,E
-321,male,20,junior,A
-322,male,23,eternal,C
-323,female,25,eternal,A
-324,male,30,fresher,C
-325,male,34,sophomore,E
-326,male,30,fresher,A
-327,male,27,sophomore,E
-328,male,24,junior,D
-329,male,27,junior,B
-330,male,25,junior,B
-331,female,35,fresher,C
-332,female,27,junior,B
-333,male,24,sophomore,C
-334,female,25,senior,E
-335,male,30,fresher,A
-336,male,27,eternal,A
-337,female,35,junior,D
-338,male,22,junior,E
-339,male,20,senior,B
-340,male,27,junior,A
-341,male,33,sophomore,A
-342,female,30,sophomore,E
-343,male,34,sophomore,A
-344,male,30,eternal,E
-345,female,25,senior,D
-346,female,29,eternal,E
-347,female,21,sophomore,D
-348,male,31,senior,D
-349,male,31,junior,B
-350,male,32,sophomore,E
-351,female,23,fresher,A
-352,female,28,junior,B
-353,female,34,senior,D
-354,female,20,fresher,E
-355,male,24,fresher,C
-356,female,34,sophomore,C
-357,male,29,fresher,A
-358,male,22,eternal,D
-359,female,34,senior,E
-360,male,35,junior,B
-361,female,31,sophomore,C
-362,male,32,senior,E
-363,female,27,eternal,D
-364,male,27,junior,E
-365,female,23,fresher,C
-366,male,28,eternal,A
-367,female,23,junior,B
-368,male,21,fresher,E
-369,male,33,senior,C
-370,male,35,eternal,B
-371,female,25,eternal,E
-372,male,22,fresher,E
-373,male,27,senior,C
-374,male,28,sophomore,C
-375,male,32,junior,A
-376,male,22,fresher,E
-377,male,33,sophomore,B
-378,male,21,eternal,B
-379,female,32,junior,A
-380,female,24,fresher,C
-381,female,35,fresher,A
-382,female,33,senior,D
-383,female,30,eternal,A
-384,female,27,fresher,B
-385,male,29,junior,E
-386,male,32,senior,E
-387,female,25,sophomore,A
-388,female,27,senior,E
-389,male,20,fresher,D
-390,male,25,senior,E
-391,female,30,junior,D
-392,male,33,junior,D
-393,male,32,sophomore,B
-394,male,26,eternal,E
-395,male,25,junior,D
-396,female,25,sophomore,D
-397,female,31,fresher,B
-398,female,31,sophomore,D
-399,male,20,junior,C
-400,male,19,fresher,D
-401,female,21,junior,C
-402,male,25,sophomore,B
-403,male,20,sophomore,A
-404,female,21,junior,A
-405,male,35,senior,A
-406,female,19,senior,C
-407,female,27,eternal,B
-408,male,20,sophomore,E
-409,female,19,sophomore,C
-410,female,33,senior,E
-411,male,31,fresher,D
-412,female,22,junior,E
-413,male,30,sophomore,C
-414,female,35,eternal,D
-415,male,32,junior,D
-416,male,25,senior,D
-417,male,34,senior,A
-418,female,32,eternal,B
-419,male,31,fresher,A
-420,male,30,senior,D
-421,female,24,eternal,E
-422,male,27,eternal,C
-423,male,22,sophomore,E
-424,male,31,senior,B
-425,female,21,fresher,B
-426,male,28,fresher,E
-427,male,21,junior,D
-428,male,35,junior,A
-429,female,24,senior,D
-430,female,29,sophomore,A
-431,female,35,sophomore,E
-432,female,30,junior,A
-433,male,25,fresher,B
-434,male,33,sophomore,C
-435,male,21,eternal,D
-436,female,30,senior,B
-437,female,27,sophomore,B
-438,male,34,eternal,D
-439,female,28,fresher,C
-440,female,29,junior,B
-441,female,28,senior,B
-442,male,32,fresher,D
-443,female,29,sophomore,B
-444,female,29,sophomore,C
-445,female,19,eternal,A
-446,female,19,eternal,D
-447,female,35,junior,D
-448,female,25,senior,B
-449,male,19,fresher,D
-450,female,24,senior,E
-451,female,22,sophomore,C
-452,male,31,eternal,C
-453,male,28,fresher,D
-454,female,31,junior,D
-455,male,31,sophomore,B
-456,female,34,sophomore,C
-457,female,33,sophomore,B
-458,female,30,senior,E
-459,female,28,eternal,A
-460,female,30,senior,B
-461,female,30,junior,D
-462,female,23,eternal,E
-463,female,25,eternal,B
-464,female,35,junior,C
-465,female,24,junior,C
-466,male,26,junior,C
-467,male,25,sophomore,B
-468,female,26,fresher,D
-469,female,34,fresher,A
-470,male,19,junior,A
-471,male,26,fresher,C
-472,male,27,fresher,D
-473,female,29,eternal,A
-474,female,21,junior,B
-475,male,28,eternal,C
-476,female,21,fresher,B
-477,female,24,eternal,B
-478,male,33,sophomore,D
-479,female,30,eternal,B
-480,male,30,junior,B
-481,female,21,senior,B
-482,female,32,sophomore,B
-483,male,21,eternal,E
-484,female,31,sophomore,D
-485,female,34,sophomore,A
-486,female,22,fresher,E
-487,male,24,eternal,B
-488,male,31,senior,E
-489,male,21,sophomore,A
-490,female,29,eternal,C
-491,female,29,junior,C
-492,female,35,fresher,C
-493,male,31,senior,C
-494,female,23,senior,D
-495,female,30,eternal,A
-496,male,26,fresher,B
-497,male,32,fresher,C
-498,male,28,fresher,B
-499,female,26,senior,C
-500,male,20,junior,B
-501,male,23,senior,A
-502,male,20,senior,A
-503,female,34,sophomore,E
-504,male,32,sophomore,A
-505,female,25,senior,D
-506,male,28,junior,E
-507,male,23,junior,D
-508,male,35,senior,B
-509,male,34,eternal,B
-510,female,23,eternal,B
-511,female,35,fresher,A
-512,male,32,eternal,E
-513,male,22,fresher,C
-514,male,25,eternal,D
-515,male,26,junior,A
-516,male,19,junior,C
-517,male,21,sophomore,C
-518,male,22,eternal,B
-519,female,23,sophomore,D
-520,female,33,senior,B
-521,male,19,sophomore,D
-522,female,32,fresher,D
-523,female,35,senior,C
-524,male,22,eternal,A
-525,female,29,eternal,C
-526,female,23,sophomore,D
-527,male,34,sophomore,E
-528,female,34,fresher,A
-529,male,29,sophomore,B
-530,male,32,eternal,E
-531,female,31,fresher,E
-532,female,22,sophomore,B
-533,male,25,sophomore,A
-534,male,21,eternal,E
-535,female,19,junior,A
-536,male,28,fresher,E
-537,male,28,eternal,E
-538,male,20,senior,D
-539,female,29,fresher,A
-540,female,19,sophomore,D
-541,female,33,eternal,D
-542,female,30,sophomore,B
-543,female,30,sophomore,E
-544,female,29,junior,B
-545,female,24,senior,C
-546,male,23,junior,D
-547,female,31,fresher,A
-548,male,33,senior,A
-549,male,31,junior,E
-550,male,34,fresher,D
-551,male,34,eternal,E
-552,female,26,senior,C
-553,male,27,junior,C
-554,male,32,senior,E
-555,male,29,sophomore,B
-556,male,24,eternal,B
-557,female,21,sophomore,C
-558,male,35,fresher,D
-559,female,25,senior,A
-560,female,19,junior,D
-561,male,21,eternal,D
-562,female,27,eternal,D
-563,male,35,eternal,B
-564,female,34,fresher,C
-565,male,30,senior,D
-566,female,34,senior,E
-567,female,19,junior,D
-568,male,19,sophomore,D
-569,female,19,junior,A
-570,male,29,eternal,B
-571,male,29,sophomore,E
-572,female,29,junior,E
-573,male,21,fresher,D
-574,female,31,fresher,C
-575,female,24,sophomore,A
-576,male,21,sophomore,C
-577,female,20,junior,D
-578,female,32,junior,C
-579,female,32,senior,A
-580,female,30,junior,C
-581,female,23,junior,D
-582,female,33,eternal,C
-583,male,30,senior,D
-584,female,25,fresher,A
-585,female,23,junior,C
-586,male,26,fresher,B
-587,female,33,senior,C
-588,female,27,sophomore,E
-589,male,30,fresher,C
-590,male,25,senior,D
-591,male,33,fresher,D
-592,female,25,junior,B
-593,female,33,senior,C
-594,female,35,fresher,C
-595,male,35,eternal,D
-596,female,20,junior,B
-597,female,33,senior,D
-598,female,31,fresher,A
-599,female,33,fresher,A
-600,female,19,senior,B
-601,female,20,fresher,A
-602,female,29,fresher,A
-603,male,33,junior,C
-604,female,27,senior,A
-605,male,35,junior,C
-606,male,31,eternal,E
-607,female,21,senior,E
-608,male,25,junior,B
-609,female,20,sophomore,B
-610,female,29,fresher,C
-611,male,25,eternal,D
-612,female,20,fresher,C
-613,female,28,sophomore,A
-614,male,35,fresher,E
-615,female,29,sophomore,D
-616,female,29,fresher,E
-617,female,32,junior,A
-618,male,27,eternal,B
-619,male,22,senior,A
-620,male,22,junior,E
-621,male,31,fresher,D
-622,male,23,junior,E
-623,male,33,fresher,A
-624,male,33,sophomore,E
-625,male,24,eternal,E
-626,female,32,eternal,A
-627,male,25,junior,A
-628,female,25,junior,B
-629,female,28,sophomore,A
-630,male,34,sophomore,D
-631,female,25,sophomore,B
-632,male,32,senior,C
-633,female,34,sophomore,E
-634,male,23,fresher,A
-635,male,32,sophomore,D
-636,male,21,sophomore,D
-637,female,31,senior,C
-638,female,21,fresher,A
-639,male,30,sophomore,E
-640,male,33,fresher,A
-641,female,33,sophomore,B
-642,female,21,fresher,D
-643,female,33,fresher,A
-644,male,25,sophomore,A
-645,male,30,senior,A
-646,female,26,senior,C
-647,male,22,fresher,C
-648,female,20,senior,A
-649,male,27,sophomore,C
-650,female,26,sophomore,A
-651,female,23,eternal,B
-652,male,27,senior,E
-653,male,35,junior,C
-654,female,32,fresher,E
-655,male,35,senior,E
-656,female,29,senior,D
-657,female,28,junior,B
-658,male,24,fresher,B
-659,male,22,fresher,B
-660,male,32,fresher,E
-661,female,23,junior,D
-662,male,31,eternal,B
-663,male,26,senior,C
-664,male,24,sophomore,C
-665,male,31,eternal,A
-666,female,26,fresher,B
-667,male,27,junior,D
-668,male,28,eternal,E
-669,male,24,junior,A
-670,male,28,sophomore,D
-671,male,21,senior,B
-672,female,24,eternal,E
-673,female,19,fresher,B
-674,female,24,eternal,B
-675,female,29,sophomore,A
-676,male,20,sophomore,E
-677,female,33,junior,B
-678,female,34,junior,A
-679,male,20,fresher,D
-680,male,19,sophomore,B
-681,female,28,fresher,D
-682,male,22,sophomore,E
-683,female,19,fresher,E
-684,female,35,fresher,E
-685,male,25,eternal,E
-686,male,35,eternal,C
-687,female,21,senior,E
-688,female,25,senior,A
-689,female,35,junior,E
-690,female,25,fresher,C
-691,female,35,eternal,C
-692,male,28,eternal,E
-693,female,32,eternal,C
-694,male,25,eternal,D
-695,male,21,senior,D
-696,female,19,junior,B
-697,female,23,eternal,E
-698,female,28,senior,C
-699,male,19,eternal,D
-700,female,33,sophomore,B
-701,female,23,eternal,C
-702,female,23,senior,D
-703,male,25,sophomore,E
-704,female,23,junior,B
-705,female,30,sophomore,D
-706,male,22,sophomore,A
-707,female,23,eternal,E
-708,male,26,sophomore,E
-709,female,29,junior,B
-710,female,30,fresher,C
-711,male,32,fresher,C
-712,male,30,senior,E
-713,female,19,sophomore,D
-714,female,20,fresher,E
-715,female,35,fresher,C
-716,female,35,junior,E
-717,female,27,junior,B
-718,male,31,senior,C
-719,male,20,senior,D
-720,male,20,sophomore,E
-721,female,27,eternal,D
-722,female,21,junior,E
-723,female,28,fresher,D
-724,male,34,senior,C
-725,female,30,junior,C
-726,female,26,sophomore,C
-727,male,24,eternal,A
-728,female,32,fresher,B
-729,female,26,senior,C
-730,female,24,senior,E
-731,female,31,sophomore,B
-732,male,19,fresher,C
-733,female,31,senior,E
-734,male,23,sophomore,B
-735,female,26,junior,C
-736,male,28,senior,A
-737,male,34,sophomore,A
-738,male,19,fresher,E
-739,female,29,eternal,E
-740,female,28,senior,E
-741,male,21,sophomore,D
-742,male,23,junior,E
-743,female,29,eternal,A
-744,female,21,fresher,C
-745,male,21,fresher,E
-746,female,23,junior,D
-747,male,25,junior,A
-748,male,26,sophomore,B
-749,female,28,junior,B
-750,female,33,fresher,A
-751,male,23,sophomore,D
-752,female,35,junior,A
-753,female,23,junior,D
-754,male,34,sophomore,D
-755,female,27,eternal,C
-756,male,29,sophomore,E
-757,male,19,junior,A
-758,male,25,sophomore,C
-759,male,21,junior,E
-760,male,21,eternal,C
-761,male,20,junior,D
-762,male,33,sophomore,A
-763,male,21,fresher,C
-764,male,19,fresher,E
-765,female,32,junior,B
-766,male,25,senior,B
-767,female,27,junior,C
-768,female,26,fresher,A
-769,male,20,fresher,D
-770,female,22,eternal,D
-771,male,30,sophomore,A
-772,female,30,senior,B
-773,female,27,sophomore,E
-774,female,19,sophomore,A
-775,female,34,sophomore,B
-776,female,19,senior,B
-777,male,34,senior,B
-778,male,21,eternal,C
-779,female,29,eternal,C
-780,male,24,sophomore,A
-781,male,30,senior,E
-782,male,30,junior,B
-783,male,20,junior,E
-784,female,30,sophomore,D
-785,female,28,junior,D
-786,male,35,fresher,D
-787,female,33,fresher,A
-788,female,35,senior,D
-789,female,35,senior,C
-790,female,19,eternal,D
-791,male,20,junior,B
-792,male,22,senior,A
-793,female,34,junior,D
-794,female,33,sophomore,D
-795,female,30,junior,A
-796,female,34,senior,C
-797,female,30,junior,B
-798,female,34,junior,B
-799,female,19,eternal,A
-800,female,25,sophomore,D
-801,female,32,junior,C
-802,female,31,sophomore,E
-803,male,26,sophomore,A
-804,male,26,junior,C
-805,male,21,junior,B
-806,female,19,junior,E
-807,female,33,eternal,D
-808,female,23,sophomore,D
-809,male,29,eternal,B
-810,female,30,fresher,C
-811,male,29,fresher,B
-812,male,19,eternal,C
-813,male,19,senior,A
-814,female,28,junior,C
-815,male,20,fresher,C
-816,female,20,eternal,E
-817,female,35,eternal,C
-818,female,32,sophomore,B
-819,male,21,eternal,D
-820,female,35,senior,E
-821,male,34,senior,D
-822,male,27,fresher,C
-823,male,22,eternal,A
-824,female,25,eternal,D
-825,male,20,junior,D
-826,male,24,sophomore,A
-827,male,25,fresher,C
-828,female,22,eternal,B
-829,male,27,junior,D
-830,male,21,sophomore,A
-831,female,30,senior,E
-832,male,24,senior,D
-833,male,27,junior,C
-834,female,29,senior,D
-835,female,19,sophomore,D
-836,female,34,eternal,C
-837,female,21,senior,D
-838,female,23,senior,D
-839,male,35,sophomore,A
-840,male,34,senior,A
-841,female,35,fresher,A
-842,male,27,fresher,E
-843,female,34,junior,C
-844,male,29,fresher,B
-845,female,22,eternal,E
-846,female,22,eternal,D
-847,male,34,sophomore,C
-848,male,21,senior,B
-849,male,23,senior,E
-850,male,29,sophomore,D
-851,female,26,sophomore,C
-852,female,23,junior,B
-853,female,19,eternal,E
-854,female,25,eternal,E
-855,female,34,senior,A
-856,female,32,senior,E
-857,female,22,junior,D
-858,female,30,fresher,E
-859,male,31,junior,B
-860,male,34,fresher,B
-861,male,32,senior,D
-862,female,28,junior,D
-863,male,27,junior,C
-864,female,21,sophomore,E
-865,female,35,eternal,B
-866,male,25,eternal,C
-867,female,31,senior,A
-868,female,34,eternal,E
-869,male,32,sophomore,D
-870,male,35,senior,C
-871,male,21,junior,B
-872,female,23,senior,B
-873,male,27,junior,B
-874,male,29,eternal,A
-875,male,29,eternal,A
-876,female,33,junior,E
-877,female,32,fresher,A
-878,male,25,junior,D
-879,male,30,senior,E
-880,female,28,eternal,C
-881,male,20,senior,A
-882,male,32,junior,B
-883,male,31,fresher,E
-884,female,33,senior,A
-885,male,19,sophomore,A
-886,male,21,fresher,D
-887,male,33,junior,C
-888,male,23,junior,C
-889,female,31,senior,D
-890,female,31,eternal,A
-891,male,22,fresher,C
-892,female,19,eternal,C
-893,male,27,junior,A
-894,male,21,sophomore,C
-895,male,23,eternal,E
-896,male,30,eternal,A
-897,female,29,junior,E
-898,female,21,sophomore,E
-899,male,30,sophomore,C
-900,male,29,fresher,D
-901,male,27,junior,C
-902,male,34,junior,D
-903,female,26,fresher,B
-904,male,21,senior,A
-905,male,21,eternal,E
-906,female,20,sophomore,D
-907,male,34,eternal,D
-908,male,22,junior,C
-909,female,22,junior,D
-910,male,30,senior,D
-911,female,23,fresher,E
-912,male,22,sophomore,A
-913,female,28,senior,E
-914,female,31,senior,E
-915,female,35,sophomore,C
-916,female,30,fresher,E
-917,male,29,sophomore,B
-918,male,29,sophomore,B
-919,female,26,fresher,A
-920,female,19,junior,A
-921,female,29,eternal,B
-922,male,34,eternal,B
-923,female,27,sophomore,A
-924,male,19,fresher,E
-925,male,31,senior,D
-926,female,31,eternal,E
-927,female,20,fresher,D
-928,male,30,fresher,D
-929,male,24,sophomore,C
-930,male,22,eternal,B
-931,female,30,senior,E
-932,male,33,junior,A
-933,female,27,fresher,E
-934,male,22,sophomore,E
-935,male,32,senior,E
-936,female,27,sophomore,D
-937,male,35,fresher,C
-938,female,31,eternal,C
-939,male,23,junior,D
-940,female,29,junior,D
-941,female,32,eternal,C
-942,female,25,senior,E
-943,female,24,fresher,C
-944,male,19,junior,E
-945,female,27,senior,B
-946,male,19,sophomore,A
-947,female,22,senior,D
-948,female,30,eternal,A
-949,female,23,junior,D
-950,male,32,fresher,E
-951,female,20,fresher,A
-952,female,29,eternal,C
-953,male,26,sophomore,C
-954,female,30,sophomore,D
-955,female,27,senior,A
-956,female,30,fresher,B
-957,male,34,fresher,A
-958,male,34,eternal,B
-959,female,30,eternal,C
-960,female,21,sophomore,B
-961,female,31,eternal,A
-962,male,29,fresher,D
-963,female,20,eternal,C
-964,male,32,fresher,E
-965,male,25,eternal,B
-966,male,31,fresher,C
-967,male,23,eternal,E
-968,female,35,sophomore,C
-969,female,28,junior,C
-970,male,29,eternal,C
-971,female,20,eternal,A
-972,male,24,sophomore,B
-973,male,20,senior,A
-974,female,23,sophomore,A
-975,male,27,sophomore,B
-976,male,28,fresher,A
-977,female,21,eternal,A
-978,male,31,junior,E
-979,female,33,eternal,D
-980,male,32,senior,E
-981,female,30,sophomore,A
-982,male,26,junior,A
-983,female,30,senior,C
-984,female,21,senior,A
-985,male,23,sophomore,C
-986,male,19,junior,E
-987,male,34,sophomore,A
-988,female,34,eternal,A
-989,male,30,sophomore,C
-990,male,31,junior,A
-991,male,28,fresher,E
-992,male,22,eternal,C
-993,male,24,junior,A
-994,male,32,senior,B
-995,female,27,senior,E
-996,female,31,eternal,D
-997,female,21,fresher,C
-998,female,23,junior,E
-999,female,34,junior,A
+0,male,33,junior,"['D', 'E']"
+1,female,22,junior,"['B', 'C', 'E']"
+2,female,35,senior,"['C', 'E']"
+3,female,25,senior,"['A', 'D']"
+4,female,20,eternal,"['B', 'C', 'E']"
+5,female,33,fresher,"['A', 'D']"
+6,female,25,eternal,"['B', 'E']"
+7,male,25,sophomore,[]
+8,female,23,eternal,"['A', 'B', 'C', 'D', 'E']"
+9,female,33,sophomore,"['A', 'E']"
+10,male,28,junior,"['A', 'B', 'D', 'E']"
+11,male,20,senior,"['B', 'C', 'D', 'E']"
+12,female,34,eternal,"['A', 'B']"
+13,male,35,fresher,"['A', 'C', 'E']"
+14,male,32,fresher,"['A', 'B', 'D', 'E']"
+15,male,27,sophomore,"['C', 'E']"
+16,male,25,junior,"['D', 'E']"
+17,female,27,senior,"['B', 'D', 'E']"
+18,female,29,junior,"['D', 'E']"
+19,male,25,junior,"['C', 'D']"
+20,female,34,eternal,"['A', 'D']"
+21,male,29,sophomore,"['A', 'B', 'E']"
+22,female,23,fresher,"['A', 'B', 'C', 'D', 'E']"
+23,male,35,senior,"['A', 'C', 'D']"
+24,male,26,eternal,"['A', 'B', 'E']"
+25,female,28,eternal,"['D', 'E']"
+26,female,20,sophomore,"['A', 'B', 'C', 'D', 'E']"
+27,male,24,junior,"['A', 'B', 'C', 'D', 'E']"
+28,male,20,senior,['E']
+29,female,35,senior,"['A', 'B', 'D', 'E']"
+30,female,35,junior,['B']
+31,female,34,junior,"['B', 'C', 'E']"
+32,female,29,sophomore,"['B', 'D', 'E']"
+33,female,31,sophomore,"['B', 'C', 'D', 'E']"
+34,male,34,eternal,"['A', 'B', 'D']"
+35,female,29,fresher,"['A', 'B', 'E']"
+36,female,28,sophomore,"['A', 'D']"
+37,male,20,senior,"['A', 'B', 'D', 'E']"
+38,female,24,fresher,"['A', 'C']"
+39,male,29,junior,"['A', 'B', 'E']"
+40,female,21,sophomore,"['A', 'B', 'C', 'E']"
+41,female,30,senior,"['A', 'C', 'D', 'E']"
+42,male,35,eternal,['B']
+43,male,21,fresher,['D']
+44,male,29,fresher,"['A', 'C', 'D', 'E']"
+45,male,29,senior,"['B', 'D']"
+46,male,32,fresher,['E']
+47,female,23,junior,"['B', 'E']"
+48,female,29,junior,['A']
+49,female,28,junior,"['A', 'B']"
+50,female,34,sophomore,"['B', 'C']"
+51,female,28,sophomore,"['C', 'E']"
+52,male,30,senior,"['B', 'C', 'D', 'E']"
+53,female,23,senior,"['A', 'B']"
+54,male,24,fresher,"['A', 'D']"
+55,female,23,senior,"['A', 'B', 'E']"
+56,male,31,senior,"['B', 'D', 'E']"
+57,female,27,senior,"['A', 'B', 'E']"
+58,female,22,fresher,"['A', 'B', 'D', 'E']"
+59,male,22,fresher,"['B', 'E']"
+60,male,20,sophomore,"['A', 'B', 'C', 'E']"
+61,female,27,sophomore,"['A', 'D', 'E']"
+62,female,19,fresher,"['C', 'D']"
+63,male,29,eternal,"['D', 'E']"
+64,male,28,junior,['C']
+65,male,34,junior,"['B', 'C']"
+66,female,23,eternal,"['A', 'C']"
+67,male,28,sophomore,"['C', 'D']"
+68,female,31,fresher,"['A', 'D']"
+69,female,28,fresher,"['A', 'B', 'C']"
+70,male,19,fresher,"['A', 'E']"
+71,male,25,fresher,"['A', 'B']"
+72,male,24,sophomore,"['A', 'D']"
+73,female,29,fresher,[]
+74,male,33,fresher,"['A', 'C', 'E']"
+75,male,27,junior,"['A', 'E']"
+76,female,29,junior,"['A', 'B', 'C', 'E']"
+77,male,20,senior,"['C', 'D', 'E']"
+78,male,32,fresher,"['A', 'B', 'C', 'D', 'E']"
+79,female,26,junior,"['A', 'B', 'C']"
+80,male,24,sophomore,"['D', 'E']"
+81,male,27,junior,"['A', 'B', 'D', 'E']"
+82,female,30,sophomore,"['A', 'E']"
+83,male,30,fresher,"['A', 'B']"
+84,male,24,junior,"['A', 'B', 'C', 'D', 'E']"
+85,male,35,senior,['C']
+86,female,22,senior,"['A', 'C', 'E']"
+87,male,31,junior,"['B', 'C', 'D']"
+88,female,24,junior,"['B', 'D', 'E']"
+89,female,24,senior,"['B', 'E']"
+90,female,30,eternal,"['A', 'E']"
+91,male,25,fresher,"['A', 'B', 'C', 'D', 'E']"
+92,male,34,senior,"['C', 'D', 'E']"
+93,male,28,sophomore,['A']
+94,male,34,junior,"['A', 'B', 'E']"
+95,female,21,fresher,"['C', 'D']"
+96,female,33,sophomore,['B']
+97,male,31,eternal,"['C', 'D', 'E']"
+98,female,33,fresher,"['B', 'C', 'D']"
+99,male,32,sophomore,"['A', 'C']"
+100,male,32,fresher,"['A', 'B', 'D']"
+101,female,31,eternal,[]
+102,female,25,junior,"['A', 'B', 'C', 'D']"
+103,female,32,junior,['D']
+104,male,20,eternal,"['A', 'B', 'C', 'E']"
+105,male,19,fresher,['D']
+106,female,35,senior,"['B', 'D', 'E']"
+107,female,32,fresher,"['B', 'D']"
+108,female,27,sophomore,"['A', 'B', 'D', 'E']"
+109,female,35,eternal,"['B', 'D', 'E']"
+110,male,26,fresher,"['A', 'E']"
+111,female,19,sophomore,"['A', 'B', 'D', 'E']"
+112,female,24,fresher,['E']
+113,male,35,junior,"['B', 'C']"
+114,male,22,junior,"['A', 'B', 'D']"
+115,female,27,sophomore,['D']
+116,male,30,fresher,"['C', 'E']"
+117,female,27,junior,"['A', 'C', 'D']"
+118,male,20,senior,"['A', 'D']"
+119,female,26,sophomore,"['B', 'D', 'E']"
+120,male,29,sophomore,['D']
+121,male,31,eternal,"['C', 'D', 'E']"
+122,female,33,eternal,"['B', 'E']"
+123,male,31,eternal,"['A', 'D']"
+124,female,33,fresher,"['A', 'B', 'C', 'D']"
+125,male,20,eternal,"['A', 'C', 'D']"
+126,male,35,junior,"['A', 'B', 'E']"
+127,male,22,senior,"['A', 'B', 'D']"
+128,female,30,eternal,"['A', 'B']"
+129,male,35,junior,"['B', 'D', 'E']"
+130,female,21,sophomore,"['A', 'B', 'D']"
+131,female,31,senior,"['A', 'B', 'C', 'E']"
+132,female,30,sophomore,"['A', 'D']"
+133,female,22,sophomore,"['A', 'B', 'C', 'D', 'E']"
+134,male,34,junior,"['A', 'B', 'D', 'E']"
+135,male,22,fresher,"['A', 'B', 'C']"
+136,male,35,eternal,"['B', 'D', 'E']"
+137,male,19,fresher,"['A', 'B', 'D', 'E']"
+138,female,26,junior,"['C', 'E']"
+139,female,35,senior,"['A', 'B', 'E']"
+140,female,19,fresher,['D']
+141,male,20,fresher,"['A', 'C', 'D']"
+142,female,33,fresher,['B']
+143,male,19,sophomore,"['D', 'E']"
+144,male,21,sophomore,[]
+145,male,34,eternal,"['A', 'B', 'D', 'E']"
+146,female,22,sophomore,"['B', 'C', 'D']"
+147,male,25,junior,"['C', 'D', 'E']"
+148,female,34,senior,"['A', 'B', 'E']"
+149,male,25,junior,"['A', 'C', 'E']"
+150,male,32,fresher,"['B', 'C']"
+151,male,33,eternal,"['A', 'C', 'D']"
+152,female,33,junior,[]
+153,male,30,eternal,"['A', 'B', 'D']"
+154,female,25,eternal,['B']
+155,male,20,sophomore,"['A', 'C', 'D', 'E']"
+156,male,25,junior,"['C', 'D', 'E']"
+157,male,33,junior,[]
+158,male,31,fresher,"['A', 'B', 'C', 'D']"
+159,female,19,eternal,"['B', 'C', 'D']"
+160,male,22,senior,['D']
+161,male,32,sophomore,"['A', 'D']"
+162,female,20,fresher,"['B', 'E']"
+163,female,23,junior,"['C', 'D', 'E']"
+164,female,32,senior,"['B', 'C', 'D', 'E']"
+165,female,30,eternal,['B']
+166,female,20,junior,"['B', 'C', 'D']"
+167,female,32,fresher,"['A', 'B', 'C', 'D', 'E']"
+168,female,20,senior,"['B', 'C', 'D']"
+169,male,32,eternal,"['A', 'E']"
+170,male,24,senior,"['B', 'C']"
+171,male,25,eternal,"['A', 'C', 'E']"
+172,male,29,senior,"['C', 'D']"
+173,female,24,sophomore,"['A', 'B', 'D']"
+174,male,29,fresher,"['B', 'E']"
+175,female,30,eternal,"['A', 'B']"
+176,female,35,junior,"['A', 'C', 'D', 'E']"
+177,female,24,sophomore,['C']
+178,male,32,sophomore,"['A', 'C', 'E']"
+179,female,23,sophomore,"['B', 'C', 'D', 'E']"
+180,female,19,senior,"['B', 'C', 'D']"
+181,female,30,sophomore,"['C', 'E']"
+182,male,24,senior,"['B', 'C', 'D']"
+183,male,27,senior,"['B', 'C', 'D']"
+184,male,34,junior,"['A', 'D']"
+185,male,33,fresher,"['C', 'D']"
+186,female,29,senior,"['A', 'B', 'E']"
+187,female,25,fresher,"['B', 'E']"
+188,female,22,junior,"['C', 'D']"
+189,female,19,senior,"['B', 'D', 'E']"
+190,male,35,senior,"['A', 'B']"
+191,female,22,junior,"['C', 'D']"
+192,female,34,eternal,"['A', 'B']"
+193,female,28,sophomore,"['A', 'C', 'D']"
+194,female,35,senior,"['A', 'B', 'C']"
+195,male,35,fresher,"['C', 'D']"
+196,female,27,junior,"['B', 'C', 'E']"
+197,male,31,fresher,"['C', 'D', 'E']"
+198,female,34,eternal,"['A', 'B', 'D', 'E']"
+199,female,28,fresher,"['A', 'B', 'C', 'E']"
+200,male,20,sophomore,"['A', 'D']"
+201,male,21,eternal,['A']
+202,female,26,eternal,"['A', 'B', 'C', 'D', 'E']"
+203,male,20,sophomore,"['B', 'D']"
+204,male,22,junior,"['A', 'D', 'E']"
+205,female,26,fresher,"['B', 'C']"
+206,male,30,sophomore,"['A', 'C']"
+207,female,24,eternal,"['A', 'C', 'E']"
+208,female,25,sophomore,"['A', 'B', 'D', 'E']"
+209,male,23,junior,['C']
+210,male,21,fresher,"['C', 'D']"
+211,male,32,senior,"['C', 'D', 'E']"
+212,male,35,sophomore,"['B', 'D', 'E']"
+213,male,26,junior,['E']
+214,female,25,eternal,"['A', 'C', 'E']"
+215,male,30,senior,"['A', 'B', 'E']"
+216,female,21,fresher,['B']
+217,male,26,fresher,"['B', 'C', 'D']"
+218,female,35,fresher,"['A', 'B', 'C', 'D']"
+219,male,33,fresher,"['A', 'B', 'E']"
+220,male,32,senior,"['A', 'C', 'D']"
+221,female,25,senior,"['A', 'E']"
+222,female,30,sophomore,"['B', 'C', 'D', 'E']"
+223,female,22,sophomore,"['A', 'B', 'D']"
+224,female,31,eternal,"['A', 'B', 'C', 'D', 'E']"
+225,female,28,junior,"['B', 'C', 'D']"
+226,female,19,junior,['A']
+227,female,21,eternal,"['A', 'D', 'E']"
+228,female,35,eternal,"['C', 'D', 'E']"
+229,male,29,sophomore,"['A', 'B', 'E']"
+230,female,28,junior,"['A', 'B', 'C', 'E']"
+231,male,34,eternal,"['A', 'B', 'D', 'E']"
+232,female,21,sophomore,"['B', 'C', 'D', 'E']"
+233,male,25,eternal,"['A', 'B']"
+234,male,20,fresher,"['A', 'B', 'C']"
+235,male,27,eternal,[]
+236,male,35,junior,"['A', 'C', 'D', 'E']"
+237,male,29,sophomore,"['A', 'B', 'C', 'D']"
+238,female,24,sophomore,"['A', 'D']"
+239,male,22,sophomore,"['A', 'B', 'C']"
+240,female,30,eternal,"['A', 'B', 'D']"
+241,female,32,sophomore,"['B', 'D', 'E']"
+242,female,30,eternal,[]
+243,male,24,junior,['B']
+244,male,23,junior,"['D', 'E']"
+245,male,34,fresher,"['B', 'E']"
+246,male,19,senior,[]
+247,female,21,sophomore,"['A', 'B', 'C']"
+248,male,28,sophomore,"['A', 'B', 'C', 'D']"
+249,female,30,senior,"['A', 'B', 'C', 'D']"
+250,female,33,sophomore,"['A', 'B']"
+251,male,27,senior,"['B', 'C']"
+252,male,23,sophomore,"['A', 'B', 'C', 'D']"
+253,female,20,junior,"['C', 'D', 'E']"
+254,female,27,eternal,"['B', 'C', 'D']"
+255,female,26,sophomore,"['C', 'E']"
+256,female,35,fresher,"['B', 'E']"
+257,male,26,eternal,"['B', 'C', 'D']"
+258,male,31,sophomore,"['A', 'B', 'C', 'D']"
+259,male,29,senior,"['A', 'E']"
+260,female,31,fresher,"['A', 'E']"
+261,male,29,junior,"['B', 'C']"
+262,male,31,fresher,"['A', 'B', 'D']"
+263,male,26,sophomore,['A']
+264,female,21,eternal,"['A', 'C', 'D', 'E']"
+265,female,32,sophomore,"['B', 'C', 'D']"
+266,female,23,fresher,['B']
+267,female,34,sophomore,"['A', 'C', 'D']"
+268,female,31,junior,"['A', 'C', 'D']"
+269,male,31,eternal,['D']
+270,male,25,eternal,"['A', 'D']"
+271,male,21,eternal,"['B', 'D', 'E']"
+272,male,31,fresher,[]
+273,male,33,sophomore,"['A', 'B', 'C', 'E']"
+274,female,30,eternal,"['A', 'D', 'E']"
+275,male,34,junior,"['B', 'C']"
+276,male,22,senior,['B']
+277,male,29,junior,"['A', 'C', 'D']"
+278,male,30,senior,"['A', 'D']"
+279,female,20,sophomore,"['A', 'C', 'E']"
+280,female,32,fresher,"['B', 'C']"
+281,female,35,eternal,"['A', 'D']"
+282,female,23,fresher,"['C', 'D', 'E']"
+283,male,33,senior,"['B', 'D']"
+284,male,34,sophomore,"['B', 'E']"
+285,female,35,fresher,['C']
+286,male,34,junior,"['A', 'E']"
+287,female,22,fresher,"['C', 'D', 'E']"
+288,male,25,senior,"['A', 'B', 'C', 'D']"
+289,male,19,junior,['C']
+290,male,25,fresher,"['A', 'C', 'D']"
+291,male,29,fresher,"['A', 'D', 'E']"
+292,female,33,junior,[]
+293,male,24,junior,['A']
+294,male,32,fresher,['A']
+295,male,28,fresher,"['A', 'C', 'E']"
+296,female,28,senior,"['A', 'D', 'E']"
+297,male,19,fresher,"['B', 'E']"
+298,male,31,sophomore,"['D', 'E']"
+299,male,27,eternal,"['C', 'E']"
+300,male,27,sophomore,"['A', 'B', 'E']"
+301,male,26,fresher,"['A', 'C', 'E']"
+302,female,21,eternal,"['B', 'E']"
+303,male,27,fresher,"['B', 'C', 'D']"
+304,male,19,eternal,"['B', 'D']"
+305,female,23,senior,"['D', 'E']"
+306,male,35,sophomore,['B']
+307,female,28,fresher,"['A', 'D', 'E']"
+308,female,35,senior,"['A', 'B', 'D']"
+309,male,32,eternal,['B']
+310,female,33,junior,"['B', 'C']"
+311,female,28,sophomore,"['A', 'B', 'C', 'D', 'E']"
+312,female,30,senior,['C']
+313,male,29,fresher,"['C', 'E']"
+314,female,35,sophomore,"['B', 'C']"
+315,female,33,fresher,"['A', 'B', 'C', 'E']"
+316,male,30,eternal,['D']
+317,female,29,fresher,"['A', 'E']"
+318,female,29,sophomore,"['A', 'B', 'C']"
+319,male,33,fresher,"['A', 'E']"
+320,female,34,eternal,"['A', 'B']"
+321,male,23,junior,"['A', 'B']"
+322,female,23,fresher,"['A', 'B', 'C']"
+323,male,35,sophomore,"['A', 'C', 'D', 'E']"
+324,female,25,junior,"['B', 'E']"
+325,female,26,eternal,"['A', 'C', 'D', 'E']"
+326,male,20,eternal,[]
+327,female,31,senior,"['A', 'C']"
+328,female,26,sophomore,"['A', 'B', 'C', 'D']"
+329,male,27,eternal,"['A', 'B', 'C', 'D']"
+330,male,28,eternal,"['A', 'B', 'C']"
+331,female,31,senior,"['B', 'D']"
+332,female,25,sophomore,"['A', 'C', 'D']"
+333,male,23,eternal,['D']
+334,female,23,fresher,"['A', 'E']"
+335,female,35,eternal,"['C', 'D', 'E']"
+336,male,31,eternal,['C']
+337,male,24,sophomore,"['A', 'B', 'D', 'E']"
+338,female,31,sophomore,"['A', 'E']"
+339,male,22,junior,"['A', 'C']"
+340,female,22,junior,['A']
+341,male,22,fresher,"['D', 'E']"
+342,male,24,sophomore,['A']
+343,female,29,eternal,"['A', 'B', 'E']"
+344,male,20,senior,"['A', 'C', 'E']"
+345,female,35,eternal,"['A', 'D']"
+346,female,23,fresher,"['B', 'C']"
+347,male,32,eternal,['A']
+348,male,22,eternal,"['A', 'B', 'C']"
+349,male,23,fresher,"['A', 'B', 'C', 'E']"
+350,male,19,junior,"['A', 'B', 'E']"
+351,female,28,sophomore,"['A', 'D', 'E']"
+352,female,25,sophomore,"['C', 'D', 'E']"
+353,female,27,senior,"['A', 'B', 'E']"
+354,female,22,junior,"['A', 'B', 'C']"
+355,female,30,eternal,"['A', 'B', 'C']"
+356,male,29,junior,['E']
+357,male,24,junior,"['A', 'B', 'C']"
+358,female,19,sophomore,['E']
+359,female,22,eternal,"['C', 'D', 'E']"
+360,female,30,fresher,"['A', 'B', 'C', 'D']"
+361,female,22,sophomore,"['A', 'B']"
+362,female,19,eternal,"['B', 'C']"
+363,female,28,sophomore,"['C', 'D']"
+364,male,19,senior,"['A', 'B', 'D', 'E']"
+365,male,30,eternal,"['A', 'B', 'C', 'D', 'E']"
+366,male,25,fresher,"['B', 'C', 'E']"
+367,male,27,junior,['E']
+368,female,30,fresher,"['B', 'D']"
+369,female,22,senior,"['B', 'C', 'E']"
+370,female,35,senior,"['A', 'B', 'C']"
+371,male,27,senior,['B']
+372,female,23,junior,"['B', 'C', 'D', 'E']"
+373,female,26,junior,['C']
+374,male,19,junior,"['A', 'B', 'C']"
+375,male,22,eternal,"['A', 'B', 'D', 'E']"
+376,male,27,fresher,"['B', 'D', 'E']"
+377,male,19,fresher,"['A', 'B', 'C', 'E']"
+378,female,30,fresher,['B']
+379,female,23,eternal,['B']
+380,female,30,sophomore,"['A', 'B', 'C', 'E']"
+381,male,32,senior,"['A', 'B', 'D', 'E']"
+382,female,20,junior,"['C', 'D']"
+383,male,33,sophomore,['A']
+384,male,30,senior,"['B', 'C']"
+385,male,22,eternal,"['A', 'C', 'E']"
+386,female,25,fresher,"['C', 'D', 'E']"
+387,female,29,senior,['A']
+388,male,20,eternal,"['A', 'B', 'C', 'E']"
+389,female,28,junior,['A']
+390,female,21,senior,['C']
+391,male,21,senior,"['A', 'E']"
+392,male,19,sophomore,['A']
+393,male,32,eternal,"['A', 'C', 'E']"
+394,male,34,eternal,"['B', 'C', 'E']"
+395,female,31,sophomore,['B']
+396,female,31,eternal,"['B', 'C', 'D', 'E']"
+397,female,34,fresher,"['A', 'C', 'E']"
+398,male,26,fresher,"['A', 'D']"
+399,female,21,sophomore,"['A', 'E']"
+400,male,27,eternal,"['A', 'C']"
+401,male,23,junior,"['A', 'B', 'D', 'E']"
+402,female,23,fresher,"['D', 'E']"
+403,male,25,senior,"['B', 'C', 'E']"
+404,female,32,fresher,"['A', 'B', 'C', 'D', 'E']"
+405,male,25,junior,"['A', 'B', 'D', 'E']"
+406,female,33,senior,['E']
+407,male,24,sophomore,"['B', 'C']"
+408,male,26,sophomore,['E']
+409,male,27,sophomore,"['B', 'D']"
+410,male,30,senior,"['C', 'D', 'E']"
+411,female,28,senior,['B']
+412,female,24,senior,"['A', 'C', 'E']"
+413,female,30,fresher,"['A', 'B', 'C', 'E']"
+414,male,28,fresher,['A']
+415,male,20,sophomore,"['A', 'B', 'E']"
+416,female,34,sophomore,"['C', 'E']"
+417,male,34,fresher,"['C', 'D', 'E']"
+418,female,20,fresher,"['A', 'C']"
+419,female,20,junior,"['A', 'B', 'D', 'E']"
+420,male,23,senior,"['A', 'B', 'D']"
+421,female,26,junior,"['A', 'D', 'E']"
+422,female,21,senior,"['A', 'B', 'D', 'E']"
+423,female,25,fresher,['E']
+424,female,34,fresher,"['A', 'E']"
+425,female,21,senior,['E']
+426,female,30,eternal,"['B', 'D']"
+427,male,24,eternal,"['B', 'D']"
+428,female,29,senior,['E']
+429,male,20,senior,['C']
+430,male,35,fresher,['D']
+431,male,26,fresher,"['B', 'E']"
+432,male,20,senior,"['A', 'B', 'C', 'D']"
+433,male,31,senior,['E']
+434,female,32,fresher,"['A', 'C', 'E']"
+435,female,32,fresher,"['A', 'B']"
+436,male,23,fresher,"['A', 'B', 'D']"
+437,female,28,senior,"['A', 'B', 'C']"
+438,male,23,eternal,['B']
+439,female,33,eternal,"['A', 'B', 'D', 'E']"
+440,male,33,junior,"['A', 'C', 'D']"
+441,female,33,eternal,"['B', 'C', 'E']"
+442,female,33,senior,"['B', 'D', 'E']"
+443,female,28,junior,"['A', 'B', 'E']"
+444,female,29,senior,"['B', 'C', 'D', 'E']"
+445,male,32,eternal,"['A', 'B', 'E']"
+446,male,33,fresher,['B']
+447,male,32,fresher,"['A', 'C']"
+448,male,33,junior,['D']
+449,male,27,junior,"['B', 'E']"
+450,female,26,fresher,"['A', 'B', 'D']"
+451,male,21,sophomore,['D']
+452,male,34,fresher,"['A', 'C', 'D', 'E']"
+453,male,22,sophomore,"['A', 'C', 'E']"
+454,male,28,fresher,"['B', 'E']"
+455,male,25,fresher,"['A', 'B', 'C', 'D', 'E']"
+456,male,33,junior,"['C', 'D']"
+457,male,34,sophomore,"['B', 'C']"
+458,male,22,eternal,"['B', 'C', 'D']"
+459,female,23,fresher,"['A', 'B', 'C', 'D']"
+460,female,21,eternal,"['A', 'B', 'D', 'E']"
+461,female,35,senior,"['A', 'B', 'D', 'E']"
+462,female,31,eternal,['D']
+463,female,34,junior,['C']
+464,male,20,sophomore,[]
+465,female,22,sophomore,"['A', 'B', 'D']"
+466,female,21,junior,[]
+467,female,29,eternal,"['A', 'E']"
+468,female,30,eternal,"['A', 'B', 'C', 'E']"
+469,male,29,fresher,"['A', 'B']"
+470,male,27,senior,"['D', 'E']"
+471,female,20,junior,"['C', 'D', 'E']"
+472,male,23,senior,['A']
+473,female,27,sophomore,"['A', 'C', 'D', 'E']"
+474,male,23,fresher,"['A', 'B', 'D', 'E']"
+475,male,29,junior,"['C', 'D', 'E']"
+476,female,27,senior,"['B', 'D', 'E']"
+477,male,26,fresher,['A']
+478,male,27,fresher,"['B', 'C', 'D', 'E']"
+479,female,19,junior,['E']
+480,male,24,fresher,['C']
+481,male,30,eternal,"['B', 'C']"
+482,female,30,senior,['C']
+483,male,21,fresher,"['A', 'B', 'C', 'D']"
+484,male,28,senior,"['A', 'C', 'E']"
+485,male,24,sophomore,"['A', 'B', 'C']"
+486,female,24,fresher,"['A', 'C', 'D']"
+487,male,23,sophomore,"['C', 'D', 'E']"
+488,male,19,fresher,"['A', 'D', 'E']"
+489,male,23,fresher,"['B', 'C', 'E']"
+490,female,26,eternal,"['B', 'C', 'D', 'E']"
+491,male,23,sophomore,"['A', 'D', 'E']"
+492,female,20,junior,"['A', 'C', 'E']"
+493,male,22,sophomore,"['A', 'B', 'C']"
+494,female,29,sophomore,"['A', 'D', 'E']"
+495,female,25,sophomore,"['B', 'D', 'E']"
+496,male,19,sophomore,"['C', 'D']"
+497,male,25,senior,"['A', 'B', 'C', 'D']"
+498,female,20,senior,"['B', 'C']"
+499,female,32,eternal,['B']
+500,female,29,senior,"['A', 'B', 'C', 'D']"
+501,male,23,junior,"['A', 'B', 'C', 'E']"
+502,male,29,fresher,"['A', 'D', 'E']"
+503,male,29,eternal,"['A', 'B', 'E']"
+504,male,25,sophomore,"['A', 'B', 'C', 'E']"
+505,female,23,senior,"['A', 'C', 'E']"
+506,male,29,sophomore,"['A', 'C', 'D', 'E']"
+507,male,30,fresher,"['B', 'E']"
+508,male,20,fresher,"['A', 'C', 'D', 'E']"
+509,female,21,senior,['B']
+510,female,28,eternal,['B']
+511,female,20,sophomore,"['A', 'B', 'C', 'D', 'E']"
+512,female,24,fresher,"['A', 'C', 'D', 'E']"
+513,male,22,senior,"['A', 'B', 'C', 'E']"
+514,male,32,sophomore,"['A', 'B', 'E']"
+515,female,22,junior,['E']
+516,male,34,eternal,"['A', 'C', 'D', 'E']"
+517,male,34,fresher,"['B', 'D']"
+518,female,25,junior,"['A', 'B', 'C', 'D', 'E']"
+519,female,19,eternal,"['B', 'C', 'D', 'E']"
+520,female,19,junior,"['A', 'B', 'C']"
+521,male,29,eternal,['B']
+522,female,32,senior,['A']
+523,female,28,senior,"['A', 'B', 'D']"
+524,male,27,sophomore,"['A', 'C', 'E']"
+525,male,21,sophomore,"['B', 'C', 'D', 'E']"
+526,male,31,senior,"['A', 'C', 'E']"
+527,female,21,eternal,['D']
+528,male,28,eternal,"['B', 'C']"
+529,male,28,fresher,"['A', 'C', 'D', 'E']"
+530,female,20,sophomore,['E']
+531,male,33,junior,"['A', 'B', 'D', 'E']"
+532,male,22,sophomore,"['A', 'B', 'C', 'D']"
+533,female,19,junior,['A']
+534,female,19,senior,"['B', 'D', 'E']"
+535,female,27,senior,"['A', 'B']"
+536,male,19,junior,"['C', 'D']"
+537,male,24,fresher,['B']
+538,male,21,fresher,"['A', 'B', 'D', 'E']"
+539,male,26,eternal,"['A', 'B', 'E']"
+540,female,27,eternal,"['A', 'C']"
+541,male,25,senior,"['A', 'B', 'D', 'E']"
+542,male,26,fresher,"['A', 'B', 'C']"
+543,male,32,fresher,"['A', 'B', 'E']"
+544,male,26,eternal,"['A', 'B', 'D']"
+545,male,19,junior,"['A', 'B', 'C', 'D', 'E']"
+546,male,27,eternal,"['A', 'D']"
+547,female,28,senior,"['A', 'C', 'D', 'E']"
+548,male,23,fresher,"['A', 'B', 'C', 'D', 'E']"
+549,female,26,eternal,"['A', 'E']"
+550,male,30,sophomore,"['A', 'C', 'D']"
+551,male,25,senior,['D']
+552,female,21,eternal,"['B', 'E']"
+553,male,32,senior,"['D', 'E']"
+554,female,32,sophomore,"['A', 'B', 'E']"
+555,female,34,fresher,"['C', 'E']"
+556,female,26,eternal,"['A', 'C']"
+557,female,28,senior,"['A', 'E']"
+558,female,32,fresher,['C']
+559,male,19,fresher,[]
+560,male,34,junior,"['A', 'E']"
+561,male,23,eternal,"['A', 'C']"
+562,female,27,fresher,[]
+563,male,29,fresher,"['A', 'B', 'E']"
+564,female,30,eternal,"['C', 'D']"
+565,male,34,eternal,"['A', 'C', 'D', 'E']"
+566,male,33,sophomore,[]
+567,male,20,fresher,"['C', 'D']"
+568,male,24,sophomore,"['A', 'D', 'E']"
+569,male,21,sophomore,"['A', 'D', 'E']"
+570,male,25,sophomore,"['A', 'B', 'C', 'D', 'E']"
+571,female,26,eternal,"['B', 'E']"
+572,female,34,junior,"['B', 'C', 'D', 'E']"
+573,female,20,eternal,"['A', 'B', 'C']"
+574,male,30,sophomore,['B']
+575,female,24,fresher,"['A', 'B', 'C', 'E']"
+576,female,26,senior,"['D', 'E']"
+577,female,34,fresher,"['B', 'C', 'D', 'E']"
+578,female,31,junior,"['B', 'C', 'D', 'E']"
+579,male,33,junior,"['A', 'E']"
+580,male,33,fresher,[]
+581,male,22,eternal,"['A', 'C', 'E']"
+582,male,28,senior,"['A', 'B', 'C']"
+583,female,22,junior,['D']
+584,female,33,sophomore,['B']
+585,male,35,eternal,['E']
+586,female,27,fresher,"['B', 'E']"
+587,female,35,junior,"['C', 'D']"
+588,female,24,senior,"['A', 'B']"
+589,male,21,junior,"['B', 'D', 'E']"
+590,female,29,junior,"['A', 'D', 'E']"
+591,male,23,junior,"['A', 'B', 'C', 'E']"
+592,female,22,fresher,"['B', 'C', 'E']"
+593,male,30,junior,"['A', 'C', 'E']"
+594,male,25,senior,[]
+595,male,20,eternal,"['A', 'C', 'E']"
+596,male,21,senior,"['A', 'D']"
+597,male,34,senior,"['C', 'D']"
+598,female,34,sophomore,"['A', 'B', 'C', 'D']"
+599,female,34,sophomore,['E']
+600,male,22,senior,"['B', 'D', 'E']"
+601,female,29,fresher,['C']
+602,female,28,eternal,"['A', 'E']"
+603,female,29,fresher,['B']
+604,female,32,sophomore,"['B', 'C']"
+605,female,33,sophomore,"['A', 'E']"
+606,female,21,eternal,['B']
+607,female,26,fresher,"['B', 'C', 'E']"
+608,male,25,eternal,['C']
+609,male,21,sophomore,"['A', 'B', 'C']"
+610,male,33,sophomore,"['B', 'C', 'D', 'E']"
+611,male,24,eternal,"['A', 'B', 'C', 'D', 'E']"
+612,male,29,senior,"['D', 'E']"
+613,male,29,eternal,"['A', 'B', 'E']"
+614,female,21,senior,"['C', 'D', 'E']"
+615,male,31,eternal,"['C', 'D']"
+616,female,28,senior,"['A', 'C', 'D']"
+617,female,29,eternal,"['A', 'B']"
+618,male,24,fresher,"['A', 'B']"
+619,male,25,eternal,"['D', 'E']"
+620,male,21,fresher,"['B', 'C', 'E']"
+621,male,31,fresher,"['A', 'B', 'D', 'E']"
+622,female,28,senior,"['A', 'B', 'C', 'D', 'E']"
+623,female,30,sophomore,"['A', 'E']"
+624,male,34,junior,"['C', 'D', 'E']"
+625,female,23,junior,"['A', 'E']"
+626,female,28,eternal,"['B', 'C']"
+627,female,32,junior,"['A', 'D', 'E']"
+628,male,32,senior,"['B', 'C', 'D']"
+629,male,21,fresher,"['A', 'C', 'D', 'E']"
+630,female,27,fresher,[]
+631,male,30,junior,"['A', 'E']"
+632,male,30,eternal,"['A', 'B', 'C', 'E']"
+633,female,24,junior,"['B', 'C', 'D', 'E']"
+634,male,23,fresher,"['B', 'C', 'E']"
+635,male,30,sophomore,"['A', 'C', 'D']"
+636,male,32,eternal,"['B', 'D', 'E']"
+637,female,23,senior,"['A', 'B', 'D', 'E']"
+638,female,31,senior,"['C', 'D']"
+639,female,31,fresher,['D']
+640,male,29,sophomore,"['B', 'C', 'E']"
+641,female,19,eternal,"['A', 'B', 'C', 'D']"
+642,female,24,eternal,"['A', 'C', 'D', 'E']"
+643,male,33,senior,['B']
+644,female,31,senior,"['A', 'C', 'D', 'E']"
+645,male,31,eternal,"['C', 'E']"
+646,male,26,eternal,['C']
+647,female,21,eternal,"['A', 'C', 'D']"
+648,male,23,sophomore,"['B', 'D', 'E']"
+649,female,28,eternal,"['A', 'B', 'D', 'E']"
+650,male,30,junior,[]
+651,male,26,senior,"['D', 'E']"
+652,female,30,eternal,"['C', 'D', 'E']"
+653,female,32,senior,"['C', 'D']"
+654,female,24,fresher,"['A', 'B', 'C']"
+655,male,19,junior,"['B', 'D', 'E']"
+656,male,33,fresher,"['A', 'B', 'C', 'E']"
+657,female,30,sophomore,"['C', 'E']"
+658,female,31,eternal,"['C', 'D']"
+659,male,27,eternal,['A']
+660,male,29,senior,"['A', 'B', 'D']"
+661,male,20,fresher,"['A', 'D', 'E']"
+662,male,29,sophomore,"['A', 'C', 'D']"
+663,female,21,sophomore,"['A', 'D', 'E']"
+664,male,29,sophomore,"['C', 'D', 'E']"
+665,female,20,sophomore,"['A', 'B']"
+666,male,34,eternal,"['D', 'E']"
+667,female,23,fresher,[]
+668,male,23,eternal,"['C', 'E']"
+669,male,23,senior,['A']
+670,female,26,senior,"['A', 'C', 'D']"
+671,male,29,junior,"['A', 'C', 'D', 'E']"
+672,female,28,sophomore,"['A', 'D']"
+673,female,32,junior,['E']
+674,female,23,eternal,"['B', 'C']"
+675,male,23,fresher,"['A', 'C', 'E']"
+676,male,28,eternal,"['A', 'C']"
+677,male,20,senior,"['A', 'B', 'C']"
+678,male,32,eternal,"['B', 'C', 'D']"
+679,female,22,eternal,"['A', 'B', 'C']"
+680,male,19,eternal,['C']
+681,female,25,sophomore,['A']
+682,female,30,junior,"['A', 'D', 'E']"
+683,male,29,junior,"['A', 'B', 'D', 'E']"
+684,male,23,junior,"['A', 'B', 'C']"
+685,male,29,fresher,"['A', 'B', 'D']"
+686,male,19,eternal,['E']
+687,female,20,eternal,"['B', 'C', 'D', 'E']"
+688,female,20,eternal,"['C', 'D', 'E']"
+689,female,24,senior,"['A', 'B', 'D']"
+690,female,20,eternal,"['A', 'B', 'E']"
+691,male,35,senior,"['A', 'B', 'E']"
+692,female,34,eternal,['E']
+693,male,20,eternal,"['B', 'C', 'D', 'E']"
+694,female,28,sophomore,"['B', 'E']"
+695,female,21,senior,"['A', 'B', 'C', 'D']"
+696,female,33,senior,"['A', 'B', 'C', 'D']"
+697,female,30,senior,"['B', 'D', 'E']"
+698,male,20,fresher,"['B', 'C', 'D', 'E']"
+699,female,28,fresher,"['B', 'C', 'E']"
+700,male,33,eternal,"['B', 'C']"
+701,female,35,junior,"['B', 'D']"
+702,female,25,fresher,[]
+703,male,19,sophomore,"['B', 'C', 'D']"
+704,female,19,fresher,"['A', 'D', 'E']"
+705,female,31,sophomore,"['B', 'D', 'E']"
+706,female,29,fresher,"['A', 'B', 'C', 'D', 'E']"
+707,male,25,eternal,"['A', 'C']"
+708,male,20,sophomore,"['A', 'B', 'E']"
+709,male,24,eternal,"['A', 'D']"
+710,female,35,sophomore,"['B', 'D', 'E']"
+711,female,19,senior,['D']
+712,male,26,senior,"['A', 'B', 'E']"
+713,male,33,fresher,[]
+714,male,35,sophomore,"['A', 'B', 'C']"
+715,male,33,eternal,"['A', 'B', 'D', 'E']"
+716,female,23,fresher,"['A', 'C']"
+717,male,19,fresher,"['D', 'E']"
+718,male,34,eternal,['B']
+719,female,23,junior,"['B', 'D']"
+720,male,33,senior,['C']
+721,male,29,junior,"['D', 'E']"
+722,male,27,senior,"['B', 'C']"
+723,female,21,sophomore,['A']
+724,female,28,sophomore,['C']
+725,female,32,senior,"['A', 'B', 'C']"
+726,female,25,junior,"['A', 'B', 'D', 'E']"
+727,male,26,eternal,"['B', 'C', 'D', 'E']"
+728,female,35,fresher,"['B', 'E']"
+729,female,34,fresher,"['A', 'B']"
+730,male,22,senior,"['A', 'B', 'C', 'D', 'E']"
+731,male,32,senior,['B']
+732,female,27,sophomore,"['B', 'D']"
+733,male,30,fresher,"['A', 'C', 'D']"
+734,female,33,junior,"['A', 'C', 'D']"
+735,male,20,junior,"['A', 'B', 'E']"
+736,female,29,junior,"['A', 'C', 'D', 'E']"
+737,female,31,sophomore,"['C', 'D', 'E']"
+738,female,27,junior,"['A', 'B', 'C']"
+739,male,28,junior,"['A', 'D']"
+740,female,33,eternal,['A']
+741,female,32,junior,"['C', 'D', 'E']"
+742,male,32,sophomore,"['A', 'B', 'C']"
+743,female,28,junior,"['A', 'B']"
+744,female,34,senior,['B']
+745,male,29,sophomore,['D']
+746,female,35,fresher,"['A', 'B', 'E']"
+747,male,25,eternal,"['A', 'B', 'C']"
+748,male,34,senior,"['A', 'C', 'E']"
+749,female,34,fresher,"['B', 'C', 'D']"
+750,female,32,eternal,"['C', 'D', 'E']"
+751,female,27,sophomore,"['A', 'B', 'C']"
+752,male,32,fresher,"['A', 'B', 'D']"
+753,female,28,junior,"['C', 'E']"
+754,female,22,sophomore,"['B', 'D', 'E']"
+755,female,21,eternal,['E']
+756,male,26,sophomore,"['A', 'B', 'C', 'D']"
+757,male,24,fresher,"['A', 'B', 'E']"
+758,male,32,sophomore,"['A', 'D', 'E']"
+759,female,28,sophomore,"['C', 'D']"
+760,female,31,sophomore,"['B', 'C', 'D', 'E']"
+761,male,35,eternal,['E']
+762,male,21,fresher,"['C', 'E']"
+763,female,23,junior,"['B', 'D', 'E']"
+764,male,21,sophomore,"['C', 'D']"
+765,female,26,sophomore,['B']
+766,female,29,sophomore,['C']
+767,male,26,senior,"['B', 'C', 'D', 'E']"
+768,female,28,junior,"['A', 'C']"
+769,female,19,senior,"['A', 'C']"
+770,male,25,eternal,"['B', 'C', 'E']"
+771,male,21,fresher,"['A', 'C', 'D']"
+772,male,26,senior,"['A', 'B', 'C', 'E']"
+773,female,34,fresher,"['A', 'B', 'C']"
+774,male,25,fresher,"['A', 'B', 'C', 'E']"
+775,female,30,fresher,"['A', 'B']"
+776,female,24,fresher,"['B', 'C', 'D']"
+777,female,23,sophomore,"['A', 'B']"
+778,male,33,junior,['B']
+779,male,20,sophomore,"['A', 'B', 'D']"
+780,female,25,senior,"['A', 'C']"
+781,female,20,senior,"['A', 'B']"
+782,female,29,eternal,"['A', 'B', 'C', 'E']"
+783,male,20,sophomore,['A']
+784,female,19,fresher,"['B', 'C', 'E']"
+785,female,28,fresher,['C']
+786,female,19,junior,"['A', 'B', 'D', 'E']"
+787,female,26,eternal,"['B', 'D', 'E']"
+788,male,21,sophomore,"['A', 'B', 'C']"
+789,male,30,senior,"['A', 'C', 'E']"
+790,female,30,fresher,"['B', 'D']"
+791,male,28,sophomore,"['A', 'B', 'D', 'E']"
+792,female,22,senior,"['A', 'C', 'D']"
+793,female,22,eternal,"['A', 'B', 'C', 'D']"
+794,female,24,junior,"['A', 'B', 'C', 'D', 'E']"
+795,male,25,junior,['A']
+796,male,20,junior,"['A', 'C', 'E']"
+797,female,34,sophomore,"['B', 'C', 'E']"
+798,male,29,sophomore,"['A', 'C']"
+799,female,30,eternal,"['A', 'C', 'E']"
+800,female,32,junior,"['B', 'C', 'E']"
+801,male,24,fresher,"['B', 'C']"
+802,female,24,eternal,"['A', 'B', 'C']"
+803,female,35,fresher,['A']
+804,female,25,junior,"['A', 'B', 'C', 'D']"
+805,male,24,sophomore,['C']
+806,female,24,sophomore,"['A', 'C', 'D']"
+807,male,23,junior,"['A', 'C', 'D', 'E']"
+808,female,21,senior,"['A', 'D']"
+809,female,31,fresher,['A']
+810,female,27,sophomore,"['A', 'C', 'E']"
+811,male,35,senior,"['A', 'E']"
+812,male,27,senior,"['A', 'B', 'C', 'D', 'E']"
+813,male,22,sophomore,"['A', 'B']"
+814,male,35,fresher,[]
+815,female,20,fresher,"['C', 'D', 'E']"
+816,female,23,junior,['E']
+817,female,33,senior,"['A', 'B', 'D', 'E']"
+818,female,35,sophomore,"['A', 'B']"
+819,male,20,junior,"['A', 'B', 'D']"
+820,male,26,sophomore,"['B', 'C', 'D']"
+821,female,35,fresher,"['B', 'C', 'D']"
+822,female,19,senior,"['B', 'C', 'D', 'E']"
+823,female,21,fresher,"['B', 'E']"
+824,male,21,sophomore,"['A', 'B']"
+825,female,19,senior,"['A', 'C']"
+826,female,19,sophomore,"['A', 'B', 'C', 'D']"
+827,female,23,sophomore,"['B', 'C']"
+828,female,28,sophomore,"['A', 'B', 'E']"
+829,female,28,junior,"['A', 'B', 'D', 'E']"
+830,male,22,junior,"['B', 'C', 'D']"
+831,female,21,eternal,"['B', 'E']"
+832,male,23,eternal,"['A', 'C', 'E']"
+833,female,32,sophomore,"['A', 'B', 'C']"
+834,male,29,fresher,"['B', 'C', 'E']"
+835,male,34,senior,"['C', 'E']"
+836,female,20,fresher,"['C', 'D', 'E']"
+837,female,30,junior,"['A', 'C', 'D']"
+838,male,33,sophomore,"['B', 'C', 'D', 'E']"
+839,male,34,senior,"['A', 'B', 'C', 'D']"
+840,male,19,senior,"['B', 'C', 'E']"
+841,female,21,sophomore,"['B', 'C']"
+842,male,32,senior,"['B', 'C', 'E']"
+843,female,32,senior,"['B', 'E']"
+844,male,20,junior,"['C', 'D', 'E']"
+845,female,29,fresher,"['A', 'C', 'D']"
+846,male,25,senior,"['C', 'D']"
+847,male,23,junior,"['B', 'C']"
+848,male,35,senior,"['A', 'B', 'C', 'E']"
+849,female,21,fresher,"['A', 'B', 'E']"
+850,male,26,eternal,"['A', 'D', 'E']"
+851,female,35,eternal,"['A', 'B', 'C']"
+852,female,33,eternal,"['A', 'B', 'C']"
+853,female,26,fresher,['E']
+854,male,21,fresher,"['A', 'E']"
+855,female,23,eternal,"['A', 'D', 'E']"
+856,female,27,sophomore,"['A', 'B', 'C']"
+857,female,27,junior,"['C', 'D']"
+858,female,26,junior,"['B', 'D']"
+859,male,35,eternal,"['A', 'D']"
+860,female,22,eternal,"['A', 'D']"
+861,male,34,senior,"['A', 'B']"
+862,male,29,senior,"['B', 'D']"
+863,male,30,eternal,"['A', 'B', 'C', 'E']"
+864,male,31,fresher,"['C', 'D', 'E']"
+865,male,29,fresher,"['B', 'C', 'E']"
+866,female,34,senior,"['A', 'C']"
+867,female,24,eternal,"['A', 'D', 'E']"
+868,male,33,fresher,"['B', 'C', 'D', 'E']"
+869,female,20,eternal,"['A', 'B', 'D', 'E']"
+870,male,33,junior,"['A', 'E']"
+871,male,26,junior,"['B', 'E']"
+872,female,28,junior,"['A', 'B']"
+873,female,21,senior,"['A', 'B', 'D', 'E']"
+874,male,32,fresher,"['A', 'B', 'E']"
+875,female,32,sophomore,['C']
+876,female,29,fresher,"['B', 'C', 'D']"
+877,male,25,eternal,"['A', 'B', 'C']"
+878,male,30,senior,"['A', 'B', 'D', 'E']"
+879,male,24,senior,"['A', 'C', 'D', 'E']"
+880,female,19,eternal,"['B', 'E']"
+881,male,29,junior,"['A', 'B', 'D']"
+882,female,31,eternal,"['A', 'B', 'C']"
+883,male,24,junior,['E']
+884,male,22,fresher,['A']
+885,female,23,senior,"['A', 'D', 'E']"
+886,female,24,junior,"['B', 'D']"
+887,male,28,sophomore,['A']
+888,female,29,junior,"['B', 'C', 'D', 'E']"
+889,male,30,senior,"['A', 'C']"
+890,male,28,sophomore,"['C', 'E']"
+891,male,21,senior,"['A', 'B', 'C']"
+892,male,35,junior,"['C', 'D', 'E']"
+893,female,21,sophomore,['E']
+894,male,28,sophomore,['D']
+895,male,32,senior,['B']
+896,female,33,fresher,"['B', 'D']"
+897,female,20,sophomore,"['B', 'E']"
+898,female,34,junior,"['A', 'B', 'C', 'E']"
+899,female,22,sophomore,"['C', 'D']"
+900,female,24,senior,"['B', 'D']"
+901,female,32,eternal,[]
+902,female,33,eternal,"['A', 'C', 'E']"
+903,female,20,fresher,['D']
+904,male,31,fresher,"['A', 'B', 'E']"
+905,male,19,sophomore,"['A', 'E']"
+906,female,25,junior,"['B', 'C', 'E']"
+907,male,24,eternal,"['C', 'D', 'E']"
+908,female,19,eternal,"['A', 'B', 'D', 'E']"
+909,male,27,fresher,"['B', 'D', 'E']"
+910,female,23,fresher,"['C', 'D', 'E']"
+911,male,19,sophomore,"['A', 'B', 'D', 'E']"
+912,male,31,junior,"['C', 'E']"
+913,female,35,fresher,"['A', 'E']"
+914,male,21,senior,"['B', 'D']"
+915,female,34,fresher,"['A', 'B', 'C', 'D', 'E']"
+916,female,29,eternal,"['A', 'D', 'E']"
+917,female,21,fresher,"['B', 'C', 'E']"
+918,female,23,fresher,"['D', 'E']"
+919,male,35,sophomore,['E']
+920,female,20,eternal,"['A', 'B', 'C']"
+921,female,30,sophomore,"['A', 'B', 'D']"
+922,male,19,junior,"['B', 'D']"
+923,male,35,senior,"['B', 'D']"
+924,female,35,junior,"['A', 'B', 'D']"
+925,female,28,eternal,"['B', 'D']"
+926,male,30,eternal,"['A', 'B', 'C', 'E']"
+927,male,25,fresher,"['C', 'D']"
+928,male,34,fresher,"['A', 'B', 'C', 'E']"
+929,female,29,junior,"['A', 'D']"
+930,male,21,junior,"['A', 'B']"
+931,female,24,sophomore,['A']
+932,female,27,sophomore,"['B', 'C', 'E']"
+933,male,35,junior,"['D', 'E']"
+934,female,22,eternal,"['B', 'C', 'D', 'E']"
+935,female,28,senior,['E']
+936,male,21,junior,"['A', 'C', 'E']"
+937,female,21,senior,"['A', 'B', 'C']"
+938,female,30,junior,"['A', 'B', 'E']"
+939,male,34,sophomore,"['C', 'E']"
+940,female,21,fresher,"['A', 'D', 'E']"
+941,female,32,fresher,['D']
+942,male,25,junior,"['A', 'B', 'C', 'D']"
+943,male,30,sophomore,"['A', 'D', 'E']"
+944,male,24,junior,"['A', 'C']"
+945,male,23,junior,"['C', 'D', 'E']"
+946,female,28,fresher,"['A', 'B', 'D']"
+947,female,23,eternal,['A']
+948,female,24,senior,"['A', 'E']"
+949,male,26,eternal,"['A', 'B', 'C', 'D', 'E']"
+950,male,29,sophomore,"['B', 'C', 'D']"
+951,male,22,eternal,"['A', 'C', 'D']"
+952,female,27,junior,"['B', 'C', 'E']"
+953,male,24,sophomore,['D']
+954,male,35,senior,"['A', 'D', 'E']"
+955,male,35,fresher,"['A', 'B', 'C', 'D', 'E']"
+956,female,25,senior,"['A', 'B', 'D', 'E']"
+957,female,20,eternal,"['A', 'B', 'E']"
+958,female,32,eternal,"['C', 'E']"
+959,female,30,eternal,"['B', 'D']"
+960,female,32,junior,"['A', 'B', 'E']"
+961,male,25,senior,"['A', 'B', 'D']"
+962,male,21,sophomore,"['B', 'C', 'E']"
+963,male,21,junior,"['B', 'E']"
+964,male,24,junior,['B']
+965,female,30,sophomore,"['A', 'C', 'D']"
+966,female,21,eternal,"['A', 'C', 'D', 'E']"
+967,female,33,senior,"['A', 'B', 'C']"
+968,female,23,eternal,[]
+969,male,31,junior,"['C', 'E']"
+970,female,31,eternal,"['B', 'D', 'E']"
+971,female,23,junior,"['A', 'C', 'D']"
+972,male,26,fresher,"['A', 'C', 'E']"
+973,male,21,junior,"['A', 'B', 'C', 'D']"
+974,female,20,junior,"['B', 'D']"
+975,male,33,eternal,"['C', 'E']"
+976,female,23,sophomore,"['A', 'E']"
+977,female,30,eternal,"['D', 'E']"
+978,female,32,sophomore,"['A', 'C', 'D']"
+979,male,19,eternal,"['A', 'B', 'D']"
+980,male,27,fresher,['E']
+981,female,27,sophomore,"['B', 'C', 'D', 'E']"
+982,female,29,sophomore,"['A', 'B', 'C', 'D']"
+983,male,35,junior,"['B', 'D', 'E']"
+984,female,20,sophomore,"['A', 'C', 'D', 'E']"
+985,female,22,senior,"['A', 'B', 'E']"
+986,male,21,senior,"['A', 'B', 'D']"
+987,male,33,senior,"['C', 'E']"
+988,male,22,junior,"['A', 'B', 'E']"
+989,male,28,senior,"['A', 'D']"
+990,female,29,eternal,['A']
+991,female,31,senior,"['B', 'C', 'D', 'E']"
+992,male,19,senior,"['C', 'E']"
+993,male,22,senior,"['A', 'D', 'E']"
+994,male,28,eternal,"['A', 'B', 'C', 'D', 'E']"
+995,female,24,fresher,['E']
+996,female,35,sophomore,"['A', 'C', 'D']"
+997,male,32,senior,"['A', 'B', 'C', 'D', 'E']"
+998,male,23,senior,"['A', 'C', 'D', 'E']"
+999,male,29,junior,"['A', 'D', 'E']"
