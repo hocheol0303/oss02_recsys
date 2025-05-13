@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
+import json
 
 RATING_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/rating_train.csv"
-USER_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/user_data.csv"
+USER_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/user_data.json"
 MAPPING_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/mapping_categories.csv"
 
 USER_ID = 1 # 예시 유저 ID
@@ -35,14 +36,24 @@ def apply_demographic_mapping(users_df, mapping_path):
     users_df['gender_idx'] = users_df['gender'].map(lambda x: gender_map.get(f'gender_{x}', -1))
     users_df['age_idx'] = users_df['age'].map(map_age_to_idx)
     users_df['grade_idx'] = users_df['grade'].map(lambda x: grade_map.get(f'grade_{x}', -1))
-    users_df['channel_idx'] = users_df['likedChannel'].map(lambda x: channel_map.get(f'likedChannel_{x}', -1))
+    
+    def map_channel_list(channel_list):
+        if isinstance(channel_list, list) and len(channel_list) > 0:
+            return [channel_map.get(f'likedChannel_{channel}', -1) for channel in channel_list]
+        else:
+            return [-1]
+    
+    users_df['channel_idx_list'] = users_df['likedChannel'].apply(map_channel_list)
+    users_df = users_df.explode('channel_idx_list').rename(columns={'channel_idx_list': 'channel_idx'}).reset_index(drop=True)
 
     return users_df
 
 # ✅ 2. Rating과 merge
 def load_and_merge(rating_path=RATING_PATH, user_path=USER_PATH, mapping_path=MAPPING_PATH):
     ratings = pd.read_csv(rating_path)
-    users = pd.read_csv(user_path)
+    with open(user_path, 'r') as f:
+        users = pd.DataFrame(json.load(f))
+
     users = apply_demographic_mapping(users, mapping_path)
     df = ratings.merge(users, on="userId")
     return df
@@ -62,6 +73,7 @@ def recommend_for_user(user_info, group_means, top_k=5):
         (['gender_idx'], "gender 일치"),
     ]
 
+    # ➡️ 조건에 맞는 그룹을 찾기
     for keys, description in conditions:
         query = np.ones(len(group_means), dtype=bool)
         for key in keys:
@@ -82,6 +94,35 @@ def recommend_for_user(user_info, group_means, top_k=5):
     fallback.rename(columns={'rating': 'predicted_rating'}, inplace=True)
     return fallback[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
 
+def recommend_for_user_multi_channel(user_rows, group_means, top_k=5):
+    all_recommendations = []
+    for _, user in user_rows.iterrows():
+        user_info = {
+            'gender_idx': user['gender_idx'],
+            'age_idx': user['age_idx'],
+            'grade_idx': user['grade_idx'],
+            'channel_idx': user['channel_idx']
+        }
+        recs = recommend_for_user(user_info, group_means, top_k=top_k)
+        all_recommendations.extend(recs)
+    
+    df_recs = pd.DataFrame(all_recommendations)
+    df_recs = df_recs.groupby('itemId')['predicted_rating'].mean().reset_index()
+    df_recs = df_recs.sort_values('predicted_rating', ascending=False).head(top_k).reset_index(drop=True)
+    df_recs['rank'] = df_recs.index + 1
+
+    return df_recs[['rank', 'itemId', 'predicted_rating']].to_dict(orient='records')
+
+def inference_multi_channel(user_id, top_k):
+    df = load_and_merge()
+    group_means = calculate_group_item_mean(df)
+
+    user_rows = df[df['userId'] == user_id]
+    if user_rows.empty:
+        raise ValueError(f"userId {user_id} not found")
+
+    recommendations = recommend_for_user_multi_channel(user_rows, group_means, top_k=top_k)
+    return recommendations
 
 def inference(user_id, top_k):
     df = load_and_merge()

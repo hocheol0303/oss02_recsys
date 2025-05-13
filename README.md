@@ -52,3 +52,5 @@ train.py의 wandb_key에 wandb 사이트 우측 상단 - user settings - API key
 <br>
 tmp_movie_data 브랜치에서 model03_id_NCF/*.csv를 볼 수 있음. <br>
 경로 설정, wandb key 설정 후 root 디렉토리에서 python model03_id_NCF/train03.py 코드 실행하면 실행 가능해야함!! <br>
+
+FastAPI : uvicorn inference:app --reload --port 8000으로 실행

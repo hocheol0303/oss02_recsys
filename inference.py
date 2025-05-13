@@ -62,21 +62,7 @@ def ncf_recommend(user_id: int, top_k: int=10):
 
 @app.get("/demographic_recommend/{user_id}")
 def demographic_recommend(user_id: int, top_k: int=5):
-    df = model04.load_and_merge()
-    group_means = model04.calculate_group_item_mean(df)
-
-    if df[df['userId'] == user_id].empty:
-        raise HTTPException(status_code=404, detail=f"userId {user_id} not found")
-
-    user = df[df['userId'] == user_id].iloc[0]
-    user_info = {
-        'gender_idx': user['gender_idx'],
-        'age_idx': user['age_idx'],
-        'grade_idx': user['grade_idx'],
-        'channel_idx': user['channel_idx']
-    }
-
-    recommendations = model04.recommend_for_user(user_info, group_means, top_k=top_k)
+    recommendations = model04.inference_multi_channel(user_id, top_k=top_k)
 
     return {
         "user_id": user_id,
