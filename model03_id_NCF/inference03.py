@@ -3,9 +3,11 @@ import pandas as pd
 import numpy as np
 from model03_id_NCF.model03 import NCF
 
-MODEL_PATH = "/Users/myserver/workspace/oss/model03_id_NCF/saved_models/movie_64_50Epoch_64Batch_LR0.001_1000Users_500Items/epoch19_20250507_164830_valrmse0.8963.pt"
-CSV_PATH = "/Users/myserver/workspace/oss/data/rating_test.csv"
-OUTPUT_PATH = "/Users/myserver/workspace/oss/tmp/inference_result.csv"
+MODEL_PATH = "/Users/myserver/workspace/oss/model03_id_NCF/epoch18_20250513_165541_valrmse0.1800.pt"
+OUTPUT_PATH = "/Users/myserver/workspace/oss/tmp/topk_recommendations.csv"
+
+USER_ID = 2  # 예시 user
+TOP_K = 10   # 원하는 추천 개수
 
 
 def load_model(model_state_dict, num_users, num_items):
@@ -14,32 +16,58 @@ def load_model(model_state_dict, num_users, num_items):
     model.eval()
     return model
 
-def predict(model, csv_path, output_path="inference_result.csv", batch_size=64):
-    df = pd.read_csv(csv_path)
-
-    user_ids = torch.tensor(df["userId"].values, dtype=torch.long)
-    item_ids = torch.tensor(df["itemId"].values, dtype=torch.long)
-
+def recommend_top_k_for_user(model, user_id, num_items, top_k=10, batch_size=512):
     device = torch.device("cuda" if torch.cuda.is_available() 
                           else "mps" if torch.backends.mps.is_available() 
                           else "cpu")
     model = model.to(device)
-    user_ids = user_ids.to(device)
-    item_ids = item_ids.to(device)
+    model.eval()
+
+    # 모든 아이템에 대해 user_id → 예측
+    all_items = torch.arange(num_items, dtype=torch.long, device=device)
+    user_ids = torch.full_like(all_items, user_id, dtype=torch.long, device=device)
 
     preds = []
-    model.eval()
     with torch.no_grad():
-        for i in range(0, len(user_ids), batch_size):
+        for i in range(0, len(all_items), batch_size):
             u = user_ids[i:i+batch_size]
-            v = item_ids[i:i+batch_size]
+            v = all_items[i:i+batch_size]
             pred = model(u, v)
             preds.extend(pred.cpu().numpy())
 
-    # 저장
-    df["predicted_rating"] = preds
-    df.to_csv(output_path, index=False)
-    print(f"✅ 예측 완료 → {output_path}")
+    preds = np.array(preds)
+    top_k_indices = np.argsort(preds)[-top_k:][::-1]  # 안전하게 뒤집기
+    top_k_indices = np.ascontiguousarray(top_k_indices)  # stride 안정화
+
+    top_k_items = all_items[top_k_indices].cpu().numpy()
+    top_k_scores = preds[top_k_indices]
+
+    # 결과 DataFrame 저장
+    df_result = pd.DataFrame({
+        "userId": [user_id]*top_k,
+        "itemId": top_k_items,
+        "predicted_rating": top_k_scores
+    })
+
+    print(f"{user_id} 사용자에 대한 추천 결과:")
+    for i, (item, rating) in enumerate(zip(top_k_items, top_k_scores)):
+        print(f"{i+1}등 추천 아이템: {item}, 예측 평점: {rating:.4f}")
+
+    df_result.to_csv(OUTPUT_PATH, index=False)
+    print(f"✅ Top-{top_k} 추천 완료 → {OUTPUT_PATH}")
+
+def inference(user_id, top_k):
+    # 모델 로드
+    checkpoint = torch.load(MODEL_PATH, map_location=torch.device("cpu"))
+    num_users = checkpoint["num_users"]
+    num_items = checkpoint["num_items"]
+    model_state_dict = checkpoint["model_state_dict"]
+
+    model = load_model(model_state_dict, num_users, num_items)
+
+    # 추천 수행
+    recommend_top_k_for_user(model, user_id, num_items, top_k)
+    print("✅ 전체 추천 완료")
 
 if __name__ == "__main__":
     checkpoint = torch.load(MODEL_PATH, map_location=torch.device("cpu"))
@@ -48,6 +76,6 @@ if __name__ == "__main__":
     model_state_dict = checkpoint["model_state_dict"]
 
     model = load_model(model_state_dict, num_users, num_items)
-    predict(model, CSV_PATH, OUTPUT_PATH)
-    print("✅ 예측 완료")
-    print(f"예측 결과는 {OUTPUT_PATH}에 저장되었습니다.")
+
+    recommend_top_k_for_user(model, USER_ID, num_items, TOP_K)
+    print("✅ 전체 추천 완료")
