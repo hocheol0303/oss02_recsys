@@ -138,3 +138,5 @@ widgetsnbextension==4.0.14
 fastapi
 uvicorn
 psycopg2
+psycopg2-binary
+sqlalchemy
