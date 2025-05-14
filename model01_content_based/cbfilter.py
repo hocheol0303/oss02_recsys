@@ -2,12 +2,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def preprocess_categories(categories):
-    """리스트 형태의 categories를 문자열로 변환"""
     if isinstance(categories, list):
         return ' '.join(categories)
     return categories or ''
 
-def get_recommendations(user, benefits, top_n=2):
+def get_recommendations(user, benefits, top_n=10):
     user_vec = preprocess_categories(user['categories'])
 
     benefit_texts = []
