@@ -4,8 +4,8 @@ import numpy as np
 import json
 from model03_id_NCF.model03 import NCF
 
-MODEL_PATH = "/Users/myserver/workspace/oss/model03_id_NCF/epoch18_20250513_153350_valrmse0.1796.pt"
-OUTPUT_PATH = "/Users/myserver/workspace/oss/tmp/inference_result.json"
+MODEL_PATH = "epoch18_20250513_153350_valrmse0.1796.pt"
+OUTPUT_PATH = "inference_result.json"
 
 USER_ID = 0
 ITEM_IDS = [1, 2, 3, 5, 0, 1000, 1001, 1002]

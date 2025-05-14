@@ -9,14 +9,12 @@ class NCF(nn.Module):
         self.item_embedding = nn.Embedding(num_items, embedding_dim)
 
         layers = []
-        # user, item 벡터를 concat할 것이므로 input_dim은 embedding_dim * 2
-        # embedding_dim을 user id, item id보다 크게 설정해야 하는가?
         input_dim = embedding_dim * 2
 
-        # hidden_dims는 각 hidden layer의 차원 수를 담고 있는 리스트. 하이퍼파라미터로 사용할 수 있을 것
         for h_dim in hidden_dims:
             layers.append(nn.Linear(input_dim, h_dim))
             layers.append(nn.ReLU())
+            #layers.append(nn.BatchNorm1d(embedding_dim))
             layers.append(nn.Dropout(dropout))
             input_dim = h_dim
 

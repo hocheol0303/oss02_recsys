@@ -4,14 +4,15 @@ import json
 import psycopg2
 
 # 임무 : 각 파일에서 불러오는 내용 postgresql로 대체하기
-# RATING_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/rating_train.csv"
-# USER_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/user_data.json"
-# MAPPING_PATH = "/Users/myserver/workspace/oss/model04_demographic_filtering/data04/mapping_categories.csv"
+# RATING_PATH = "data04/rating_train.csv"
+# USER_PATH = "data04/user_data.json"
+# MAPPING_PATH = "data04/mapping_categories.csv"
 conn = psycopg2.connect(
         host="localhost",
-        database="testdb",
-        user="testuser",
-        password="",
+        database="infotree",
+        user="infotree",
+        password="info1234",
+        port=5432
     )
 
 

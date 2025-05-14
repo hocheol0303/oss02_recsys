@@ -13,7 +13,7 @@ def get_connection():
         dbname="infotree",
         user="infotree", 
         password="info1234",
-        port=5433
+        port=5432
     )
 
 @app.get("/recommendations/{user_id}")
@@ -30,7 +30,7 @@ def recommend(user_id: int):
         return {"error": "User not found"}
 
     # benefits
-    cur.execute("SELECT id, categories FROM benefits")
+    cur.execute("SELECT id, categories FROM benefits WHERE end_date >= NOW() AND private = false")
     benefits = cur.fetchall()
     print("benefits:", benefits)
 
