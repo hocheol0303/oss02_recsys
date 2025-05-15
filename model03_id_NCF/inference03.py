@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from model03_id_NCF.model03 import NCF
 
-MODEL_PATH = "epoch18_20250513_165541_valrmse0.1800.pt"
+MODEL_PATH = "model03_id_NCF/epoch47_20250515_155420_valrmse0.5814.pt"
 OUTPUT_PATH = "topk_recommendations.csv"
 
 USER_ID = 2  # 예시 user

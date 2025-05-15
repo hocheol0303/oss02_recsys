@@ -12,7 +12,7 @@ app = FastAPI()
 # NCF (Neural Collaborative Filtering) 세팅
 # =========================
 
-MODEL_PATH_NCF = "model03_id_NCF/epoch18_20250513_165541_valrmse0.1800.pt"
+MODEL_PATH_NCF = "model03_id_NCF/epoch47_20250515_155420_valrmse0.5814.pt"
 checkpoint_ncf = torch.load(MODEL_PATH_NCF, map_location=torch.device("cpu"))
 num_users_ncf = checkpoint_ncf["num_users"]
 num_items_ncf = checkpoint_ncf["num_items"]

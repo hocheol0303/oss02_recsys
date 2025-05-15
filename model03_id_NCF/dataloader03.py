@@ -38,22 +38,28 @@ def get_valid_user_benefit_rating():
     cur.execute(query, (today, today))
     rows = cur.fetchall()
 
-    cur.close()
-    conn.close()
-
     df = pd.DataFrame(rows, columns=["user_id", "benefit_id", "likes"])
     df['rating'] = 0.5
     df['likes'] = df['likes'].apply(lambda x:x if x else [])
     df['rating'] = df.apply(lambda row: 1.0 if row['benefit_id'] in row['likes'] else row['rating'], axis=1)
     
-    return df[['user_id', 'benefit_id', 'rating']]
+    cur.execute("SELECT MAX(id) FROM users;")
+    num_users = cur.fetchone()[0] or 0
+
+    cur.execute("SELECT MAX(id) FROM benefits;")
+    num_items = cur.fetchone()[0] or 0
+
+    cur.close()
+    conn.close()
+
+    return df[['user_id', 'benefit_id', 'rating']], num_users, num_items
 
 def get_dataloader_from_sql(batch_size=32, shuffle=True):
-    df = get_valid_user_benefit_rating()
+    df, num_users, num_items = get_valid_user_benefit_rating()
     train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)
 
     train_loader = DataLoader(RatingDataset(train_df), batch_size=batch_size, shuffle=shuffle)
     val_loader = DataLoader(RatingDataset(val_df), batch_size=batch_size, shuffle=False)
 
 
-    return train_loader, val_loader
+    return train_loader, val_loader, num_users, num_items
