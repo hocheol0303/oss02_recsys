@@ -1,71 +1,76 @@
 import pandas as pd
 import numpy as np
-import json
 import psycopg2
-
-# 임무 : 각 파일에서 불러오는 내용 postgresql로 대체하기
-# RATING_PATH = "data04/rating_train.csv"
-# USER_PATH = "data04/user_data.json"
-# MAPPING_PATH = "data04/mapping_categories.csv"
-conn = psycopg2.connect(
-        host="localhost",
-        database="infotree",
-        user="infotree",
-        password="info1234",
-        port=5432
-    )
-
+from sqlalchemy import create_engine
 
 USER_ID = 1 # 예시 유저 ID
 K = 20  # 추천할 아이템 개수
 
-# ✅ 1. Demographic 매핑 함수 (숫자 age 처리 포함)
-def apply_demographic_mapping(users_df):
-    mapping = pd.read_sql("SELECT * FROM mapping", conn)
+# conn = psycopg2.connect(
+#         host="localhost",
+#         database="infotree",
+#         user="infotree",
+#         password="info1234",
+#         port=5432
+#     )
 
-    # 매핑 dict 생성
-    gender_map = mapping[mapping['category'].str.startswith('gender_')].set_index('category')['index'].to_dict()
-    age_map = mapping[mapping['category'].str.startswith('age_')].set_index('category')['index'].to_dict()
-    grade_map = mapping[mapping['category'].str.startswith('grade_')].set_index('category')['index'].to_dict()
-    channel_map = mapping[mapping['category'].str.startswith('likedchannel_')].set_index('category')['index'].to_dict()
+engine = create_engine('postgresql+psycopg2://infotree:info1234@localhost:5432/infotree')
 
-    # ➡️ 나이 매핑 (숫자 → 범위 → index)
-    def map_age_to_idx(age):
-        if 19 <= age <= 21:
-            return age_map['age_19-21']
-        elif 22 <= age <= 24:
-            return age_map['age_22-24']
-        elif 25 <= age <= 27:
-            return age_map['age_25-27']
-        elif 28 <= age <= 30:
-            return age_map['age_28-30']
-        else:
-            return age_map['age_31-']
 
-    # 매핑 적용
-    users_df['gender_idx'] = users_df['gender'].map(lambda x: gender_map.get(f'gender_{x}', -1))
-    users_df['age_idx'] = users_df['age'].map(map_age_to_idx)
-    users_df['grade_idx'] = users_df['grade'].map(lambda x: grade_map.get(f'grade_{x}', -1))
-    
-    def map_channel_list(channel_list):
-        if isinstance(channel_list, list) and len(channel_list) > 0:
-            return [channel_map.get(f'likedchannel_{channel}', -1) for channel in channel_list]
-        else:
-            return [-1]
-    
-    users_df['channel_idx_list'] = users_df['likedchannel'].apply(map_channel_list)
-    users_df = users_df.explode('channel_idx_list').rename(columns={'channel_idx_list': 'channel_idx'}).reset_index(drop=True)
+active_benefits_df = pd.read_sql("""
+    SELECT id AS benefit_id
+    FROM benefits
+    WHERE start_date <= NOW() AND end_date >= NOW()
+""", engine)
 
-    return users_df
+users_df = pd.read_sql("SELECT id AS user_id, likes, channel, year, grade, gender FROM users", engine)
 
-# ✅ 2. Rating과 merge
-def load_and_merge():
-    ratings = pd.read_sql("SELECT * FROM ratings", conn)
-    users = pd.read_sql("SELECT * FROM users", conn)
+logs_df = pd.read_sql("""
+    SELECT user_id, benefit_id, 0.5 AS rating
+    FROM logs
+    WHERE benefit_id IN (SELECT id FROM benefits WHERE start_date <= NOW() AND end_date >= NOW())
+""", engine)
 
-    users = apply_demographic_mapping(users)
-    df = ratings.merge(users, left_on="userid", right_on="id")
-    return df
+
+def map_age(year):
+    age = 2025 - year
+    if 19 <= age <= 21:
+        return '19-21'
+    elif 22 <= age <= 24:
+        return '22-24'
+    elif 25 <= age <= 27:
+        return '25-27'
+    elif 28 <= age <= 30:
+        return '28-30'
+    else:
+        return '31+'
+
+def map_grade(grade):
+    if grade in [1, 2, 3, 4]:
+        return str(grade)
+    else:
+        return '기타'
+
+
+users_df = users_df.explode('channel')
+users_df['channel_group'] = users_df['channel'].fillna(-1).astype('Int64')
+users_df['age_group'] = users_df['year'].apply(map_age)
+users_df['grade_group'] = users_df['grade'].apply(map_grade)
+user_profile_df = users_df[['user_id', 'gender', 'age_group', 'grade_group', 'channel_group']].drop_duplicates()
+
+likes_df = users_df[['user_id', 'likes', 'channel_group']].dropna(subset=['likes'])
+likes_df = likes_df.explode('likes').rename(columns={'likes': 'benefit_id'})
+likes_df = likes_df[likes_df['benefit_id'].isin(active_benefits_df['benefit_id'])]
+likes_df['rating'] = 1
+
+logs_df = logs_df.merge(users_df[['user_id', 'channel_group']], on='user_id', how='left')
+
+combined_df = pd.concat([logs_df, likes_df], ignore_index=True)
+combined_df = combined_df.groupby(['user_id', 'benefit_id', 'channel_group'], as_index=False)['rating'].max()
+
+final_df = combined_df.merge(user_profile_df, on=['user_id', 'channel_group'], how='left')
+group_means = final_df.groupby(['gender', 'age_group', 'grade_group', 'channel_group', 'benefit_id'])['rating'].mean().reset_index()
+
 
 # ✅ 3. 그룹별 평균 계산
 def calculate_group_item_mean(df):
@@ -76,11 +81,12 @@ def calculate_group_item_mean(df):
 # ✅ 4. 추천
 def recommend_for_user(user_info, group_means, top_k=5):
     conditions = [
-        (['gender_idx', 'age_idx', 'grade_idx', 'channel_idx'], "모든 그룹 일치"),
-        (['gender_idx', 'age_idx', 'grade_idx'], "gender, age, grade 일치"),
-        (['gender_idx', 'age_idx'], "gender, age 일치"),
-        (['gender_idx'], "gender 일치"),
+        (['gender', 'age_group', 'grade_group', 'channel_group'], "모든 그룹 일치"),
+        (['gender', 'age_group', 'grade_group'], "gender, age, grade 일치"),
+        (['gender', 'age_group'], "gender, age 일치"),
+        (['gender'], "gender 일치"),
     ]
+
 
     # ➡️ 조건에 맞는 그룹을 찾기
     for keys, description in conditions:
@@ -94,77 +100,38 @@ def recommend_for_user(user_info, group_means, top_k=5):
             user_group_sorted = user_group.sort_values('rating', ascending=False).head(top_k).reset_index(drop=True)
             user_group_sorted['rank'] = user_group_sorted.index + 1
             user_group_sorted.rename(columns={'rating': 'predicted_rating'}, inplace=True)
-            return user_group_sorted[['rank', 'itemid', 'predicted_rating']].to_dict(orient='records')
+            return user_group_sorted[['rank', 'benefit_id', 'predicted_rating']].to_dict(orient='records')
 
     # ➡️ 마지막 fallback: 전체 평균
     print("❗ 그룹 없음 → 전체 평균 추천")
-    fallback = group_means.groupby('itemid')['rating'].mean().sort_values(ascending=False).head(top_k).reset_index()
+    fallback = group_means.groupby('benefit_id')['rating'].mean().sort_values(ascending=False).head(top_k).reset_index()
     fallback['rank'] = range(1, len(fallback)+1)
     fallback.rename(columns={'rating': 'predicted_rating'}, inplace=True)
-    return fallback[['rank', 'itemid', 'predicted_rating']].to_dict(orient='records')
+    return fallback[['rank', 'benefit_id', 'predicted_rating']].to_dict(orient='records')
 
 def recommend_for_user_multi_channel(user_rows, group_means, top_k=5):
     all_recommendations = []
     for _, user in user_rows.iterrows():
         user_info = {
-            'gender_idx': user['gender_idx'],
-            'age_idx': user['age_idx'],
-            'grade_idx': user['grade_idx'],
-            'channel_idx': user['channel_idx']
+            'gender': user['gender'],
+            'age_group': user['age_group'],
+            'grade_group': user['grade_group'],
+            'channel_group': user['channel_group']
         }
         recs = recommend_for_user(user_info, group_means, top_k=top_k)
         all_recommendations.extend(recs)
     
     df_recs = pd.DataFrame(all_recommendations)
-    df_recs = df_recs.groupby('itemid')['predicted_rating'].mean().reset_index()
+    df_recs = df_recs.groupby('benefit_id')['predicted_rating'].mean().reset_index()
     df_recs = df_recs.sort_values('predicted_rating', ascending=False).head(top_k).reset_index(drop=True)
     df_recs['rank'] = df_recs.index + 1
 
-    return df_recs[['rank', 'itemid', 'predicted_rating']].to_dict(orient='records')
+    return df_recs[['rank', 'benefit_id', 'predicted_rating']].to_dict(orient='records')
 
-def inference_multi_channel(user_id, top_k):
-    df = load_and_merge()
-    group_means = calculate_group_item_mean(df)
-
-    user_rows = df[df['id'] == user_id]
+def inference_multi_channel(user_id, top_k=5):
+    user_rows = final_df[final_df['user_id'] == user_id].drop_duplicates(subset=['channel_group'])
     if user_rows.empty:
         raise ValueError(f"userId {user_id} not found")
 
     recommendations = recommend_for_user_multi_channel(user_rows, group_means, top_k=top_k)
     return recommendations
-
-def inference(user_id, top_k):
-    df = load_and_merge()
-    group_means = calculate_group_item_mean(df)
-
-    if df[df['id'] == user_id].empty:
-        raise ValueError(f"userId {user_id} not found")
-
-    user = df[df['id'] == user_id].iloc[0]
-    user_info = {
-        'gender_idx': user['gender_idx'],
-        'age_idx': user['age_idx'],
-        'grade_idx': user['grade_idx'],
-        'channel_idx': user['channel_idx']
-    }
-
-    recommendations = recommend_for_user(user_info, group_means, top_k=top_k)
-    return recommendations
-
-
-# ✅ 5. 전체 실행 예시
-if __name__ == "__main__":
-    df = load_and_merge()
-    group_means = calculate_group_item_mean(df)
-
-    # 유저 예시 (예: userId=2 기준)
-    user_example = df[df['id'] == USER_ID].iloc[0]
-    user_info = {
-        'gender_idx': user_example['gender_idx'],
-        'age_idx': user_example['age_idx'],
-        'grade_idx': user_example['grade_idx'],
-        'channel_idx': user_example['channel_idx']
-    }
-
-    recommendations = recommend_for_user(user_info, group_means, top_k=K)
-    print(recommendations)
