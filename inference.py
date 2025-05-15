@@ -5,8 +5,20 @@ import torch
 import numpy as np
 from model03_id_NCF.model03 import NCF
 from model04_demographic_filtering import model04
+from model01_content_based.cbfilter import get_recommendations
+import psycopg2
+import psycopg2.extras
 
 app = FastAPI()
+
+def get_connection():
+    return psycopg2.connect(
+        host="localhost",
+        dbname="infotree",
+        user="infotree", 
+        password="info1234",
+        port=5432
+    )
 
 # =========================
 # NCF (Neural Collaborative Filtering) 세팅
@@ -68,4 +80,33 @@ def demographic_recommend(user_id: int, top_k: int=5):
         "user_id": user_id,
         "top_k": top_k,
         "recommendations": recommendations
+    }
+
+
+@app.get("/recommendations/{user_id}")
+def recommend(user_id: int):
+    conn = get_connection()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    # users
+    cur.execute("SELECT categories FROM users WHERE id = %s", (user_id,))
+    user = cur.fetchone()
+    if not user:
+        cur.close()
+        conn.close()
+        return {"error": "User not found"}
+
+    # benefits
+    cur.execute("SELECT id, categories FROM benefits WHERE end_date >= NOW() AND private = false")
+    benefits = cur.fetchall()
+    print("benefits:", benefits)
+
+    cur.close()
+    conn.close()
+
+    top_benefits = get_recommendations(user, benefits)
+
+    return {
+        "user_id": user_id,
+        "recommended_benefits": top_benefits
     }
