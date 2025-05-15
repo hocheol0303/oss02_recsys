@@ -13,8 +13,8 @@ LEARNING_RATE = 1e-3
 BATCH_SIZE = 64
 EPOCHS = 50
 
-SAVE_DIR = "/Users/myserver/workspace/oss/model03_id_NCF/saved_models"
-WANDB_KEY = '/Users/myserver/workspace/OSS/tmp/wandb_key.txt'
+SAVE_DIR = "model03_id_NCF/saved_models"
+WANDB_KEY = 'tmp/wandb_key.txt'
 
 RUN_NAME = f'model03_{BATCH_SIZE}Batch_{EPOCHS}Epoch_{BATCH_SIZE}Batch_LR{LEARNING_RATE}'
 
