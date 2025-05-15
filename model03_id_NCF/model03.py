@@ -14,7 +14,6 @@ class NCF(nn.Module):
         for h_dim in hidden_dims:
             layers.append(nn.Linear(input_dim, h_dim))
             layers.append(nn.ReLU())
-            layers.append(nn.BatchNorm1d(h_dim))
             layers.append(nn.Dropout(dropout))
             input_dim = h_dim
 
@@ -27,4 +26,4 @@ class NCF(nn.Module):
         x = torch.cat([user_emb, item_emb], dim=-1)
         x = self.mlp(x)
         x = self.output_layer(x)
-        return x.squeeze()
+        return x.view(-1)
