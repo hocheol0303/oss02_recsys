@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import psycopg2
 from sqlalchemy import create_engine
+from datetime import datetime
 
 USER_ID = 1 # 예시 유저 ID
 K = 20  # 추천할 아이템 개수
@@ -18,7 +19,8 @@ engine = create_engine('postgresql+psycopg2://infotree:info1234@localhost:5432/i
 
 
 def map_age(year):
-    age = 2025 - year
+    now = datetime.now().year
+    age = now - year
     if 19 <= age <= 21:
         return '19-21'
     elif 22 <= age <= 24:
