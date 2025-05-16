@@ -104,7 +104,7 @@ def inference_multi_channel(user_id, top_k=5):
     active_benefits_df = pd.read_sql("""
         SELECT id AS benefit_id
         FROM benefits
-        WHERE start_date <= NOW() AND end_date >= NOW()
+        WHERE start_date <= NOW() AND end_date >= NOW() AND private = FALSE
     """, engine)
 
     users_df = pd.read_sql("SELECT id AS user_id, likes, channel, year, grade, gender FROM users", engine)
